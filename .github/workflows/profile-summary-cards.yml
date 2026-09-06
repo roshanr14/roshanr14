@@ -37,5 +37,9 @@ jobs:
         run: |
           git pull --rebase origin main
           git add profile-summary-card-output/
-          git commit -m "chore: Update profile summary cards [skip ci]" || exit 0
-          git push origin main
+          if git diff --staged --quiet; then
+            echo "No changes to commit in summary cards."
+          else
+            git commit -m "chore: Update profile summary cards [skip ci]"
+            git push origin main
+          fi

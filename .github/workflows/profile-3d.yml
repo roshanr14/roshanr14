@@ -16,14 +16,23 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
       - uses: yoshi389111/github-profile-3d-contrib@0.7.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: roshanr14
+
       - name: Commit & Push 3D Graphs
         run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git pull --rebase origin main
           git add -A profile-3d-contrib/
-          git commit -m "feat: Update 3D isometric cyberpunk contribution city" || exit 0
-          git push
+          if git diff --staged --quiet; then
+            echo "No changes to commit in 3D graphs."
+          else
+            git commit -m "feat: Update 3D isometric contribution city [skip ci]"
+            git push origin main
+          fi

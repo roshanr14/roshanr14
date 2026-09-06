@@ -1,7 +1,7 @@
 name: GitHub Profile Summary Cards
 
 on:
-  schedule: # Execute daily at midnight
+  schedule:
     - cron: '0 0 * * *'
   workflow_dispatch:
   push:
@@ -17,6 +17,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       
       - name: Configure git
         run: |
@@ -29,3 +31,11 @@ jobs:
         with:
           USERNAME: roshanr14
           THEME: tokyonight
+          AUTO_PUSH: false
+
+      - name: Commit and push changes
+        run: |
+          git pull --rebase origin main
+          git add profile-summary-card-output/
+          git commit -m "chore: Update profile summary cards [skip ci]" || exit 0
+          git push origin main

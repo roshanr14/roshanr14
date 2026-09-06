@@ -42,9 +42,9 @@
 <p align="center">
   <a href="https://github.com/roshanr14">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="profile-3d-contrib/profile-night-rainbow.svg">
-      <source media="(prefers-color-scheme: light)" srcset="profile-3d-contrib/profile-night-rainbow.svg">
-      <img src="profile-3d-contrib/profile-night-rainbow.svg" alt="Roshan's 3D Isometric Contribution City" width="100%" />
+      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/roshanr14/roshanr14/main/profile-3d-contrib/profile-night-rainbow.svg?v=2">
+      <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/roshanr14/roshanr14/main/profile-3d-contrib/profile-night-rainbow.svg?v=2">
+      <img src="https://raw.githubusercontent.com/roshanr14/roshanr14/main/profile-3d-contrib/profile-night-rainbow.svg?v=2" alt="Roshan's 3D Isometric Contribution City" width="100%" />
     </picture>
   </a>
 </p>

@@ -83,10 +83,10 @@
 
 <p align="center">
   <a href="https://github.com/roshanr14">
-    <img src="https://github-readme-stats-anuraghazra.vercel.app/api?username=roshanr14&show_icons=true&theme=tokyonight&border_color=00f0ff&bg_color=060913&title_color=00f0ff&text_color=f8fafc&icon_color=a855f7&hide_border=false&include_all_commits=true&count_private=true" alt="Roshan's GitHub Stats" height="175" />
+    <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=roshanr14&theme=tokyonight" alt="Roshan's GitHub Stats" width="48%" />
   </a>
   <a href="https://github.com/roshanr14">
-    <img src="https://github-readme-stats-anuraghazra.vercel.app/api/top-langs/?username=roshanr14&layout=compact&theme=tokyonight&border_color=00f0ff&bg_color=060913&title_color=00f0ff&text_color=f8fafc&hide_border=false&count_private=true" alt="Top Languages" height="175" />
+    <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=roshanr14&theme=tokyonight" alt="Top Languages" width="48%" />
   </a>
 </p>
 

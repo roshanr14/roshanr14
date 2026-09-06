@@ -10,24 +10,6 @@
   </a>
 </p>
 
-<p align="center">
-  <a href="#-profile_data">
-    <img src="https://img.shields.io/badge/View_Portfolio-ff0055?style=for-the-badge&logo=rocket&logoColor=white" alt="View Portfolio CTA" />
-  </a>
-  &nbsp;
-  <a href="mailto:roshan.dev@example.com">
-    <img src="https://img.shields.io/badge/Get_In_Touch-00f0ff?style=for-the-badge&logo=telegram&logoColor=black" alt="Get In Touch CTA" />
-  </a>
-</p>
-
-<div align="center">
-
-| 🚀 **PROJECTS** | 🤝 **HAPPY CLIENTS** | ⚡ **EXPERIENCE** |
-| :---: | :---: | :---: |
-| <img src="https://img.shields.io/badge/100+-ff0055?style=for-the-badge&logo=github&logoColor=white" /><br><b>Completed Missions</b> | <img src="https://img.shields.io/badge/50+-00ff88?style=for-the-badge&logo=checkmarx&logoColor=black" /><br><b>Global Collaborations</b> | <img src="https://img.shields.io/badge/3+_Years-3b82f6?style=for-the-badge&logo=clockify&logoColor=white" /><br><b>Coding Experience</b> |
-
-</div>
-
 ---
 
 ### 👨‍💻 **`PROFILE_DATA`**

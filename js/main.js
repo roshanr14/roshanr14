@@ -131,13 +131,19 @@ function init3DCyberCanvas() {
     const centerX = width > 992 ? width * 0.72 : width * 0.5;
     const centerY = height * 0.48;
 
+    // 3-second continuous rainbow hue cycle
+    const rainbowHue = (Date.now() / (3000 / 360)) % 360;
+    const primaryColor = `hsl(${rainbowHue}, 100%, 65%)`;
+    const secondaryColor = `hsl(${(rainbowHue + 120) % 360}, 100%, 65%)`;
+    const tertiaryColor = `hsl(${(rainbowHue + 240) % 360}, 100%, 65%)`;
+
     // 1. Draw 3D Perspective Grid at Bottom
-    draw3DGrid(ctx, width, height, gridOffset, mouse.currentX);
+    draw3DGrid(ctx, width, height, gridOffset, mouse.currentX, rainbowHue);
 
     // 2. Project and Draw 3D Point Cloud Sphere
     const projectedPoints = [];
 
-    points.forEach((p) => {
+    points.forEach((p, index) => {
       // Rotate 3D Euler
       let x1 = p.baseX * Math.cos(angleY) - p.baseZ * Math.sin(angleY);
       let z1 = p.baseZ * Math.cos(angleY) + p.baseX * Math.sin(angleY);
@@ -153,13 +159,15 @@ function init3DCyberCanvas() {
       const projX = x3 * scale + centerX;
       const projY = y3 * scale + centerY;
 
+      const dynamicColor = index % 3 === 0 ? primaryColor : index % 3 === 1 ? secondaryColor : tertiaryColor;
+
       if (scale > 0) {
         projectedPoints.push({
           x: projX,
           y: projY,
           z: z2,
           scale: scale,
-          color: p.color,
+          color: dynamicColor,
           size: p.size * scale
         });
       }
@@ -179,9 +187,9 @@ function init3DCyberCanvas() {
           ctx.beginPath();
           ctx.moveTo(projectedPoints[i].x, projectedPoints[i].y);
           ctx.lineTo(projectedPoints[j].x, projectedPoints[j].y);
-          const alpha = (1 - dist / 65) * 0.18 * projectedPoints[i].scale;
-          ctx.strokeStyle = `rgba(0, 240, 255, ${alpha})`;
-          ctx.lineWidth = 0.8;
+          const alpha = (1 - dist / 65) * 0.22 * projectedPoints[i].scale;
+          ctx.strokeStyle = `hsla(${rainbowHue}, 100%, 65%, ${alpha})`;
+          ctx.lineWidth = 0.9;
           ctx.stroke();
         }
       }
@@ -192,7 +200,7 @@ function init3DCyberCanvas() {
       ctx.beginPath();
       ctx.arc(p.x, p.y, Math.max(0.5, p.size), 0, Math.PI * 2);
       ctx.fillStyle = p.color;
-      ctx.shadowBlur = p.z > 0 ? 12 : 3;
+      ctx.shadowBlur = p.z > 0 ? 14 : 4;
       ctx.shadowColor = p.color;
       ctx.globalAlpha = Math.max(0.2, (p.z + sphereRadius) / (sphereRadius * 2));
       ctx.fill();
@@ -202,7 +210,6 @@ function init3DCyberCanvas() {
 
     // 3. Project and Draw 3D Orbiting Ring
     ringPoints.forEach((p) => {
-      // Tilt ring by 45 deg + rotate
       const tiltAngle = Math.PI / 3.5;
       let y0 = p.baseY * Math.cos(tiltAngle) - p.baseZ * Math.sin(tiltAngle);
       let z0 = p.baseZ * Math.cos(tiltAngle) + p.baseY * Math.sin(tiltAngle);
@@ -217,9 +224,9 @@ function init3DCyberCanvas() {
       if (scale > 0) {
         ctx.beginPath();
         ctx.arc(projX, projY, Math.max(0.6, p.size * scale), 0, Math.PI * 2);
-        ctx.fillStyle = '#00f0ff';
-        ctx.shadowBlur = 10;
-        ctx.shadowColor = '#00f0ff';
+        ctx.fillStyle = `hsl(${(rainbowHue + 180) % 360}, 100%, 65%)`;
+        ctx.shadowBlur = 12;
+        ctx.shadowColor = `hsl(${(rainbowHue + 180) % 360}, 100%, 65%)`;
         ctx.globalAlpha = Math.max(0.2, (z1 + ringRadius) / (ringRadius * 2));
         ctx.fill();
         ctx.globalAlpha = 1.0;
@@ -256,25 +263,25 @@ function init3DCyberCanvas() {
   render();
 }
 
-function draw3DGrid(ctx, width, height, offset, mouseTilt) {
+function draw3DGrid(ctx, width, height, offset, mouseTilt, rainbowHue = 180) {
   const horizonY = height * 0.65;
   const gridWidth = width * 1.4;
   const startX = -width * 0.2;
 
   ctx.save();
-  // Draw glowing horizon laser line
+  // Draw glowing horizon laser line with rainbow gradient
   const horizonGrad = ctx.createLinearGradient(0, horizonY, width, horizonY);
   horizonGrad.addColorStop(0, 'transparent');
-  horizonGrad.addColorStop(0.3, 'rgba(0, 240, 255, 0.2)');
-  horizonGrad.addColorStop(0.5, 'rgba(168, 85, 247, 0.5)');
-  horizonGrad.addColorStop(0.7, 'rgba(0, 240, 255, 0.2)');
+  horizonGrad.addColorStop(0.3, `hsla(${rainbowHue}, 100%, 65%, 0.3)`);
+  horizonGrad.addColorStop(0.5, `hsla(${(rainbowHue + 120) % 360}, 100%, 65%, 0.7)`);
+  horizonGrad.addColorStop(0.7, `hsla(${(rainbowHue + 240) % 360}, 100%, 65%, 0.3)`);
   horizonGrad.addColorStop(1, 'transparent');
 
   ctx.beginPath();
   ctx.moveTo(0, horizonY);
   ctx.lineTo(width, horizonY);
   ctx.strokeStyle = horizonGrad;
-  ctx.lineWidth = 1.5;
+  ctx.lineWidth = 2;
   ctx.stroke();
 
   // Perspective vertical lines converging to vanishing point
@@ -286,7 +293,7 @@ function draw3DGrid(ctx, width, height, offset, mouseTilt) {
     ctx.beginPath();
     ctx.moveTo(vanishingX, horizonY);
     ctx.lineTo(bottomX, height);
-    ctx.strokeStyle = 'rgba(0, 240, 255, 0.04)';
+    ctx.strokeStyle = `hsla(${rainbowHue}, 100%, 65%, 0.05)`;
     ctx.lineWidth = 1;
     ctx.stroke();
   }
@@ -295,11 +302,11 @@ function draw3DGrid(ctx, width, height, offset, mouseTilt) {
   for (let y = horizonY; y < height; y += (y - horizonY + 12) * 0.25) {
     const currentY = y + (offset % 15);
     if (currentY > horizonY && currentY < height) {
-      const alpha = ((currentY - horizonY) / (height - horizonY)) * 0.08;
+      const alpha = ((currentY - horizonY) / (height - horizonY)) * 0.1;
       ctx.beginPath();
       ctx.moveTo(0, currentY);
       ctx.lineTo(width, currentY);
-      ctx.strokeStyle = `rgba(0, 240, 255, ${alpha})`;
+      ctx.strokeStyle = `hsla(${(rainbowHue + 60) % 360}, 100%, 65%, ${alpha})`;
       ctx.lineWidth = 1;
       ctx.stroke();
     }

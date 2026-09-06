@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=00f0ff,0284c7,3b82f6,6366f1,a855f7,00f0ff&height=240&section=header&text=⚡%20ROSHAN%20⚡&fontSize=58&fontAlignY=36&animation=twinkling&fontColor=ffffff&desc=Engineering%20Student%20%E2%80%A2%20Full-Stack%20Web%20Developer&descSize=21&descAlignY=60&descColor=00f0ff&stroke=00f0ff&strokeWidth=2" width="100%" alt="Roshan 3D Cyber Banner" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=ff0055,ff7700,ffdd00,00ff88,00f0ff,3b82f6,a855f7,ff0055&height=240&section=header&text=⚡%20ROSHAN%20⚡&fontSize=58&fontAlignY=36&animation=twinkling&fontColor=ffffff&desc=Engineering%20Student%20%E2%80%A2%20Full-Stack%20Web%20Developer&descSize=21&descAlignY=60&descColor=ffffff&stroke=00f0ff&strokeWidth=2" width="100%" alt="Roshan Rainbow Banner" />
 </p>
 
 <p align="center">

@@ -31,7 +31,7 @@
 | ⚙️ **Backend & APIs** | **`Node.js`** • **`Express.js`** • **`RESTful APIs`** |
 | 🗄️ **Databases** | **`MongoDB`** • **`PostgreSQL`** • **`MySQL`** |
 | 🧰 **Engineering Tools** | **`Git`** • **`GitHub`** • **`Docker Basics`** • **`Linux / Bash`** • **`VS Code`** • **`Postman`** |
-| 🎯 **Current Focus** | **`Eager to learn new`** & **`|
+| 🎯 **Current Focus** | **`Eager to learn new`** |
 | ☕ **Fun Fact** | **`"I turn caffeine and curiosity into clean, functional code ☕🚀"`** |
 
 </div>

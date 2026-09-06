@@ -79,15 +79,27 @@
 
 ---
 
-### 📊 GitHub Activity & Metrics
+### 📊 **`GITHUB_ACTIVITY & CONTRIBUTION_METRICS`**
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=roshanr14&show_icons=true&theme=tokyonight&border_color=00f0ff&bg_color=060913&title_color=00f0ff&text_color=f8fafc&icon_color=a855f7&hide_border=false" alt="Roshan's GitHub Stats" height="170" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=roshanr14&layout=compact&theme=tokyonight&border_color=00f0ff&bg_color=060913&title_color=00f0ff&text_color=f8fafc&hide_border=false" alt="Top Languages" height="170" />
+  <img src="https://github-readme-stats.vercel.app/api?username=roshanr14&show_icons=true&theme=tokyonight&border_color=00f0ff&bg_color=060913&title_color=00f0ff&text_color=f8fafc&icon_color=a855f7&hide_border=false" alt="Roshan's GitHub Stats" height="175" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=roshanr14&layout=compact&theme=tokyonight&border_color=00f0ff&bg_color=060913&title_color=00f0ff&text_color=f8fafc&hide_border=false" alt="Top Languages" height="175" />
 </p>
 
 <p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=roshanr14&theme=tokyonight&border=00f0ff&background=060913&ring=00f0ff&fire=a855f7&currStreakLabel=00f0ff&stroke=00f0ff&sideLabels=f8fafc" alt="GitHub Streak" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=roshanr14&theme=tokyonight&border=00f0ff&background=060913&ring=00f0ff&fire=a855f7&currStreakLabel=00f0ff&stroke=00f0ff&sideLabels=f8fafc" alt="GitHub Streak" width="95%" />
+</p>
+
+#### 📈 **`CONTRIBUTION_GRAPH // REAL-TIME ACTIVITY`**
+
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=roshanr14&theme=tokyo-night&bg_color=060913&color=00f0ff&line=a855f7&point=ff0055&area=true&hide_border=false&border_color=00f0ff" alt="Roshan's Contribution Activity Graph" width="95%" />
+</p>
+
+#### 🟩 **`CONTRIBUTION_CALENDAR_GRID`**
+
+<p align="center">
+  <img src="https://ghchart.rshah.org/00f0ff/roshanr14" alt="Roshan's 365 Days Contribution Chart" width="95%" />
 </p>
 
 ---

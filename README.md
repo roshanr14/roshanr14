@@ -1,12 +1,17 @@
-# <p align="center">⚡ Hi there, I'm <span style="color:#00f0ff;">Roshan</span> 👋</p>
-
 <p align="center">
-  <a href="https://github.com/DenverCoder1/readme-typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Space+Grotesk&size=22&duration=3000&pause=1000&color=00F0FF&center=true&vCenter=true&width=600&lines=Engineering+Student+%26+B.Tech+Undergrad;Full-Stack+Web+Developer;Building+Modern%2C+Fast+%26+Cyber+Web+Apps;Passionate+about+DSA+%26+System+Design" alt="Typing SVG" /></a>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,3,5,6&height=220&section=header&text=⚡%20ROSHAN%20⚡&fontSize=54&fontAlignY=38&animation=twinkling&fontColor=00f0ff&desc=Engineering%20Student%20%E2%80%A2%20Full-Stack%20Web%20Developer&descSize=20&descAlignY=62&descColor=f8fafc" width="100%" alt="Roshan Banner" />
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Status-Undergraduate%20Engineering%20Student-00f0ff?style=for-the-badge&logo=codeforces&logoColor=black" alt="Status Badge"/>
-  <img src="https://img.shields.io/badge/Focus-Full--Stack%20Web%20Dev-a855f7?style=for-the-badge&logo=react&logoColor=white" alt="Focus Badge"/>
+  <a href="https://github.com/roshanr14">
+    <img src="https://readme-typing-svg.herokuapp.com?font=Space+Grotesk&weight=800&size=24&duration=2500&pause=1000&color=00F0FF&center=true&vCenter=true&width=650&lines=👋+HI+THERE%2C+I'M+ROSHAN;⚡+ENGINEERING+STUDENT+%26+TECH+ENTHUSIAST;💻+FULL-STACK+WEB+DEVELOPER;🚀+TURNING+IDEAS+INTO+DYNAMIC+EXPERIENCES" alt="Typing SVG" />
+  </a>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Identity-Roshan-00f0ff?style=for-the-badge&logo=codeforces&logoColor=black" alt="Identity Badge"/>
+  <img src="https://img.shields.io/badge/Status-Undergraduate%20Engineering%20Student-a855f7?style=for-the-badge&logo=google-scholar&logoColor=white" alt="Status Badge"/>
+  <img src="https://img.shields.io/badge/Focus-Full--Stack%20Web%20Dev-38bdf8?style=for-the-badge&logo=react&logoColor=black" alt="Focus Badge"/>
   <img src="https://img.shields.io/badge/Open%20To-Internships%20%26%20Collabs-10b981?style=for-the-badge&logo=github&logoColor=white" alt="Open To Badge"/>
 </p>
 
@@ -14,6 +19,7 @@
 
 ```javascript
 const roshan = {
+  name: "Roshan",
   pronouns: "He / Him",
   role: "Engineering Student & Web Developer",
   education: "Bachelor of Technology (B.Tech)",

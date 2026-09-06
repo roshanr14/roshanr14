@@ -22,11 +22,11 @@
 | 🎓 **Academic Degree** | **`Bachelor of Technology (B.Tech)`** — **`Engineering Undergraduate`** |
 | 💼 **Core Domain** | **`Engineering Student`** & **`Full-Stack Web Developer`** |
 | 💻 **Core Languages** |  **`Python`** • **`C++`** • **`JAVA`**|
-| 🌐 **Frontend Stack** | **`React.js`** • **`Next.js`** • **`Tailwind CSS`** • **`Bootstrap`** |
-| ⚙️ **Backend & APIs** | **`Node.js`** • **`Express.js`** • **`RESTful APIs`** |
+| 🌐 **Frontend Stack** | **`React.js`** • **`Next.js`** • **`Tailwind CSS`** • **`Vite`** |
+| ⚙️ **Backend & APIs** | **`Node.js`** • **`Supabase`** |
 | 🗄️ **Databases** | **`MongoDB`** • **`PostgreSQL`** • **`MySQL`** |
-| 🧰 **Engineering Tools** | **`Git`** • **`GitHub`** • **`Docker Basics`** • **`Linux / Bash`** • **`VS Code`** • **`Postman`** |
-| 🎯 **Current Focus** | **`Eager to learn new technologies & master DSA`** |
+| 🧰 **Tools** | **`Antigravity`** • **`GitHub`** • **`Vercel`** • **`Claude`** • **`VS Code`**  |
+| 🎯 **Current Focus** | **`Eager to learn new technologies`** |
 | ☕ **Fun Fact** | **`"I turn caffeine and curiosity into clean, functional code ☕🚀"`** |
 
 </div>

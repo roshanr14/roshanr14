@@ -83,36 +83,31 @@
 
 <p align="center">
   <a href="https://github.com/roshanr14">
-    <img src="https://github-readme-stats.vercel.app/api?username=roshanr14&show_icons=true&theme=tokyonight&border_color=00f0ff&bg_color=060913&title_color=00f0ff&text_color=f8fafc&icon_color=a855f7&hide_border=false&include_all_commits=true&count_private=true" alt="Roshan's GitHub Stats" height="175" />
+    <img src="https://github-readme-stats-anuraghazra.vercel.app/api?username=roshanr14&show_icons=true&theme=tokyonight&border_color=00f0ff&bg_color=060913&title_color=00f0ff&text_color=f8fafc&icon_color=a855f7&hide_border=false&include_all_commits=true&count_private=true" alt="Roshan's GitHub Stats" height="175" />
   </a>
   <a href="https://github.com/roshanr14">
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=roshanr14&layout=compact&theme=tokyonight&border_color=00f0ff&bg_color=060913&title_color=00f0ff&text_color=f8fafc&hide_border=false&count_private=true" alt="Top Languages" height="175" />
+    <img src="https://github-readme-stats-anuraghazra.vercel.app/api/top-langs/?username=roshanr14&layout=compact&theme=tokyonight&border_color=00f0ff&bg_color=060913&title_color=00f0ff&text_color=f8fafc&hide_border=false&count_private=true" alt="Top Languages" height="175" />
   </a>
 </p>
 
 <p align="center">
   <a href="https://github.com/roshanr14">
-    <img src="https://github-readme-streak-stats.herokuapp.com/?user=roshanr14&theme=tokyonight&border=00f0ff&background=060913&ring=00f0ff&fire=a855f7&currStreakLabel=00f0ff&stroke=00f0ff&sideLabels=f8fafc" alt="GitHub Streak" width="95%" />
+    <img src="https://streak-stats.demolab.com/?user=roshanr14&theme=tokyonight&border=00f0ff&background=060913&ring=00f0ff&fire=a855f7&currStreakLabel=00f0ff&stroke=00f0ff&sideLabels=f8fafc" alt="GitHub Streak" width="95%" />
   </a>
 </p>
 
-#### 📈 **`CONTRIBUTION_ACTIVITY_GRAPH`**
+#### ⚡ **`PROFILE_ACTIVITY & COMMIT_ANALYTICS`**
 
 <p align="center">
   <a href="https://github.com/roshanr14">
-    <img src="https://github-readme-activity-graph.vercel.app/graph?username=roshanr14&theme=react-dark&hide_border=true&area=true" alt="Roshan's Contribution Activity Graph" width="95%" />
+    <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=roshanr14&theme=tokyonight" alt="Roshan's Profile Activity Details" width="48%" />
   </a>
-</p>
-
-#### 🏆 **`GITHUB_TROPHIES & ACHIEVEMENTS`**
-
-<p align="center">
   <a href="https://github.com/roshanr14">
-    <img src="https://github-profile-trophy.vercel.app/?username=roshanr14&theme=tokyonight&margin_w=10&margin_h=10&no-bg=true&no-frame=false" alt="Roshan's GitHub Trophies" width="100%" />
+    <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=roshanr14&theme=tokyonight" alt="Roshan's Productive Time Analysis" width="48%" />
   </a>
 </p>
 
-#### 🟩 **`CONTRIBUTION_CALENDAR_HEATMAP (365 DAYS)`**
+#### 🟩 **`365-DAY_CONTRIBUTION_CALENDAR_HEATMAP`**
 
 <p align="center">
   <a href="https://github.com/roshanr14">

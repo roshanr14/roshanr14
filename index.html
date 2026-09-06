@@ -813,19 +813,35 @@ const roshan = {
 
         <!-- Live GitHub Contribution Activity & Graph Widgets -->
         <div class="github-activity-container" style="margin-top: 2rem; display: flex; flex-direction: column; gap: 1.5rem;">
-          <div class="cyber-card cyber-glass" style="padding: 1.5rem; border: 1px solid rgba(0, 240, 255, 0.3); border-radius: 12px; background: rgba(6, 9, 19, 0.7); backdrop-filter: blur(12px);">
-            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
-              <h4 style="font-family: 'Orbitron', monospace; color: var(--color-cyan, #00f0ff); margin: 0; font-size: 1.1rem; display: flex; align-items: center; gap: 0.5rem;">
-                <i class="fa-solid fa-chart-line"></i> LIVE CONTRIBUTION ACTIVITY GRAPH
-              </h4>
-              <a href="https://github.com/roshanr14" target="_blank" rel="noopener noreferrer" class="cyber-btn cyber-btn-ghost" style="padding: 0.4rem 0.8rem; font-size: 0.8rem;">
-                <i class="fa-brands fa-github"></i> VIEW PROFILE @roshanr14
-              </a>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem;">
+            <div class="cyber-card cyber-glass" style="padding: 1.5rem; border: 1px solid rgba(0, 240, 255, 0.3); border-radius: 12px; background: rgba(6, 9, 19, 0.7); backdrop-filter: blur(12px);">
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
+                <h4 style="font-family: 'Orbitron', monospace; color: var(--color-cyan, #00f0ff); margin: 0; font-size: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                  <i class="fa-solid fa-chart-pie"></i> PROFILE COMMIT ACTIVITY
+                </h4>
+                <a href="https://github.com/roshanr14" target="_blank" rel="noopener noreferrer" class="cyber-btn cyber-btn-ghost" style="padding: 0.3rem 0.6rem; font-size: 0.75rem;">
+                  <i class="fa-brands fa-github"></i> @roshanr14
+                </a>
+              </div>
+              <div style="text-align: center; overflow-x: auto; padding: 0.5rem 0;">
+                <a href="https://github.com/roshanr14" target="_blank" rel="noopener noreferrer">
+                  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=roshanr14&theme=tokyonight" alt="Roshan's Profile Activity Details" style="max-width: 100%; height: auto; border-radius: 8px;" />
+                </a>
+              </div>
             </div>
-            <div style="text-align: center; overflow-x: auto; padding: 0.5rem 0;">
-              <a href="https://github.com/roshanr14" target="_blank" rel="noopener noreferrer">
-                <img src="https://github-readme-activity-graph.vercel.app/graph?username=roshanr14&theme=react-dark&hide_border=true&area=true" alt="Roshan's Contribution Activity Graph" style="max-width: 100%; height: auto; border-radius: 8px;" />
-              </a>
+
+            <div class="cyber-card cyber-glass" style="padding: 1.5rem; border: 1px solid rgba(255, 119, 0, 0.3); border-radius: 12px; background: rgba(6, 9, 19, 0.7); backdrop-filter: blur(12px);">
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
+                <h4 style="font-family: 'Orbitron', monospace; color: var(--color-orange, #ff7700); margin: 0; font-size: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                  <i class="fa-solid fa-fire"></i> GITHUB STREAK
+                </h4>
+                <span style="font-family: 'Orbitron', monospace; font-size: 0.75rem; color: #94a3b8;">LIVE METRICS</span>
+              </div>
+              <div style="text-align: center; overflow-x: auto; padding: 0.5rem 0;">
+                <a href="https://github.com/roshanr14" target="_blank" rel="noopener noreferrer">
+                  <img src="https://streak-stats.demolab.com/?user=roshanr14&theme=tokyonight&border=00f0ff&background=060913&ring=00f0ff&fire=a855f7&currStreakLabel=00f0ff&stroke=00f0ff&sideLabels=f8fafc" alt="GitHub Streak" style="max-width: 100%; height: auto; border-radius: 8px;" />
+                </a>
+              </div>
             </div>
           </div>
 

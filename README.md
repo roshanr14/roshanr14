@@ -1,12 +1,12 @@
 <p align="center">
   <a href="https://github.com/roshanr14">
-    <img src="assets/roshan-neobrutalism.svg" width="100%" alt="⚡ ROSHAN ⚡ Neobrutalism Design" />
+    <img src="assets/roshan-neofuturism.svg" width="100%" alt="⚡ ROSHAN ⚡ Neo-Futurism Design" />
   </a>
 </p>
 
 <p align="center">
   <a href="https://github.com/roshanr14">
-    <img src="https://readme-typing-svg.herokuapp.com?font=Space+Grotesk&weight=900&size=24&duration=2400&pause=900&color=C084FC&center=true&vCenter=true&multiline=true&width=750&height=80&lines=👋+HI+THERE%2C+I'M+ROSHAN!;⚡+ENGINEERING+STUDENT+%26+FULL-STACK+DEV;" alt="Neobrutalism Glowing Purple Typing SVG" />
+    <img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&weight=900&size=24&duration=2400&pause=900&color=00F0FF&center=true&vCenter=true&multiline=true&width=750&height=80&lines=👋+HI+THERE%2C+I'M+ROSHAN!;⚡+ENGINEERING+STUDENT+%26+FULL-STACK+DEV;" alt="Neo-Futurism Cyber Typing SVG" />
   </a>
 </p>
 

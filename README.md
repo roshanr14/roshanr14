@@ -1,10 +1,10 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=ff0055,ff7700,ffdd00,00ff88,00f0ff,3b82f6,a855f7,ff0055&height=250&section=header&text=⚡%20ROSHAN%20⚡&fontSize=60&fontAlignY=36&animation=twinkling&fontColor=ffffff&desc=✨%20Engineering%20Student%20•%20Full-Stack%20Web%20Developer%20✨&descSize=21&descAlignY=60&descColor=ffffff&stroke=00f0ff&strokeWidth=2" width="100%" alt="⚡ ROSHAN ⚡ Animated Rainbow Hero Banner" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=2a0845,581c87,7e22ce,9333ea,a855f7,c084fc,e879f9,a855f7,581c87,2a0845&height=250&section=header&text=⚡%20ROSHAN%20⚡&fontSize=60&fontAlignY=36&animation=twinkling&fontColor=ffffff&desc=✨%20Engineering%20Student%20•%20Full-Stack%20Web%20Developer%20✨&descSize=21&descAlignY=60&descColor=ffffff&stroke=c084fc&strokeWidth=2" width="100%" alt="⚡ ROSHAN ⚡ Animated Glowing Purple Hero Banner" />
 </p>
 
 <p align="center">
   <a href="https://github.com/roshanr14">
-    <img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&weight=900&size=26&duration=2400&pause=900&color=00F0FF&center=true&vCenter=true&multiline=true&width=750&height=110&lines=👋+HI+THERE%2C+I'M+ROSHAN!;⚡+ENGINEERING+STUDENT+%26+FULL-STACK+DEV;💻+BUILDING+NEXT-GEN+WEB+ARCHITECTURES;🚀+PASSIONATE+ABOUT+DSA+%26+SYSTEM+DESIGN" alt="Orbitron Rainbow Typing SVG" />
+    <img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&weight=900&size=26&duration=2400&pause=900&color=C084FC&center=true&vCenter=true&multiline=true&width=750&height=110&lines=👋+HI+THERE%2C+I'M+ROSHAN!;⚡+ENGINEERING+STUDENT+%26+FULL-STACK+DEV;💻+BUILDING+NEXT-GEN+WEB+ARCHITECTURES;🚀+PASSIONATE+ABOUT+DSA+%26+SYSTEM+DESIGN" alt="Orbitron Glowing Purple Typing SVG" />
   </a>
 </p>
 
@@ -144,7 +144,7 @@
 ---
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=ff0055,ff7700,ffdd00,00ff88,00f0ff,3b82f6,a855f7,ff0055&height=120&section=footer" width="100%" alt="Footer Banner" /><br>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=2a0845,581c87,7e22ce,9333ea,a855f7,c084fc,e879f9,a855f7,581c87,2a0845&height=120&section=footer" width="100%" alt="Footer Banner" /><br>
   <i>💡 "Engineering is the art of turning mathematical logic into impactful reality."</i><br>
   <b>⚡ Crafted with ❤️ by Roshan ⚡</b>
 </p>

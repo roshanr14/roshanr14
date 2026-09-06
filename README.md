@@ -36,28 +36,6 @@
 
 </div>
 
-<details>
-<summary><b>⚡ Click to inspect raw JavaScript object</b></summary>
-
-```javascript
-const roshan = {
-  name: "Roshan",
-  pronouns: "He / Him",
-  role: "Engineering Student & Web Developer",
-  education: "Bachelor of Technology (B.Tech)",
-  code: ["JavaScript", "TypeScript", "Python", "C++", "HTML5", "CSS3"],
-  technologies: {
-    frontend: ["React.js", "Next.js", "Tailwind CSS", "Bootstrap"],
-    backend: ["Node.js", "Express.js", "REST APIs"],
-    databases: ["MongoDB", "PostgreSQL", "MySQL"],
-    tools: ["Git", "GitHub", "Docker Basics", "Linux / Bash", "VS Code", "Postman"]
-  },
-  currentFocus: "Architecting high-performance web systems and mastering Data Structures & Algorithms",
-  funFact: "I turn caffeine and curiosity into clean, functional code ☕🚀"
-};
-```
-</details>
-
 ---
 
 ### 🛠️ Technical Matrix & Arsenal

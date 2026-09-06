@@ -83,6 +83,12 @@
 
 <p align="center">
   <a href="https://github.com/roshanr14">
+    <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fgithub-contributions-api.jogruber.de%2Fv4%2Froshanr14&query=%24.total%5B'2026'%5D&suffix=%20Contributions&label=⚡%20TOTAL%20CONTRIBUTIONS&color=00f0ff&style=for-the-badge&logo=github&logoColor=black" alt="Total GitHub Contributions" />
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/roshanr14">
     <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=roshanr14&theme=tokyonight" alt="Roshan's GitHub Stats" width="48%" />
   </a>
   <a href="https://github.com/roshanr14">

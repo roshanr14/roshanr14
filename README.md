@@ -24,14 +24,14 @@
 | 🏷️ **ATTRIBUTE** | 💎 **SPECIFICATION & DETAILS** |
 | :--- | :--- |
 | 👤 **Name & Identity** | **`Roshan`** *(Pronouns: **`He / Him`**)* |
-| 🎓 **Academic Degree** | **`Bachelor of Technology (B.Tech)`** — **`Engineering Undergrad`** |
+| 🎓 **Academic Degree** | **`Bachelor of Technology (B.Tech)`** — **`Engineering Undergraduate`** |
 | 💼 **Core Domain** | **`Engineering Student`** & **`Full-Stack Web Developer`** |
 | 💻 **Core Languages** | **`JavaScript (ES6+)`** • **`TypeScript`** • **`Python`** • **`C++`** • **`HTML5`** • **`CSS3`** |
 | 🌐 **Frontend Stack** | **`React.js`** • **`Next.js`** • **`Tailwind CSS`** • **`Bootstrap`** |
 | ⚙️ **Backend & APIs** | **`Node.js`** • **`Express.js`** • **`RESTful APIs`** |
 | 🗄️ **Databases** | **`MongoDB`** • **`PostgreSQL`** • **`MySQL`** |
 | 🧰 **Engineering Tools** | **`Git`** • **`GitHub`** • **`Docker Basics`** • **`Linux / Bash`** • **`VS Code`** • **`Postman`** |
-| 🎯 **Current Focus** | **`Architecting High-Performance Web Systems`** & **`Mastering DSA`** |
+| 🎯 **Current Focus** | **`Eager to learn new`** & **`|
 | ☕ **Fun Fact** | **`"I turn caffeine and curiosity into clean, functional code ☕🚀"`** |
 
 </div>

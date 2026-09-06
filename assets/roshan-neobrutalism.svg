@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 220" width="100%" height="220" fill="none">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;900&amp;family=Syne:wght@800;900&amp;family=JetBrains+Mono:wght@700&amp;display=swap');
+
+      .neo-box-shadow {
+        fill: #000000;
+      }
+      .neo-main-card {
+        fill: #A855F7;
+        stroke: #000000;
+        stroke-width: 4px;
+      }
+      .neo-inner-card {
+        fill: #FFE600;
+        stroke: #000000;
+        stroke-width: 4px;
+      }
+      .neo-pill-cyan {
+        fill: #00F0FF;
+        stroke: #000000;
+        stroke-width: 3px;
+      }
+      .neo-pill-pink {
+        fill: #FF2E93;
+        stroke: #000000;
+        stroke-width: 3px;
+      }
+      .neo-pill-green {
+        fill: #00FF88;
+        stroke: #000000;
+        stroke-width: 3px;
+      }
+      .neo-text-title {
+        font-family: 'Syne', 'Space Grotesk', Impact, sans-serif;
+        font-weight: 900;
+        font-size: 72px;
+        fill: #000000;
+        letter-spacing: -1px;
+      }
+      .neo-text-title-shadow {
+        font-family: 'Syne', 'Space Grotesk', Impact, sans-serif;
+        font-weight: 900;
+        font-size: 72px;
+        fill: #FFFFFF;
+        letter-spacing: -1px;
+      }
+      .neo-badge-text {
+        font-family: 'Space Grotesk', sans-serif;
+        font-weight: 800;
+        font-size: 14px;
+        fill: #000000;
+        letter-spacing: 0.5px;
+      }
+      .neo-mono {
+        font-family: 'JetBrains Mono', monospace;
+        font-weight: 700;
+        font-size: 13px;
+        fill: #000000;
+      }
+    </style>
+  </defs>
+
+  <!-- Background Canvas Grid Accent -->
+  <g transform="translate(10, 10)">
+    <!-- Main Big Shadow -->
+    <rect x="18" y="18" width="760" height="180" rx="12" class="neo-box-shadow" />
+
+    <!-- Main Container Card -->
+    <rect x="10" y="10" width="760" height="180" rx="12" class="neo-main-card" />
+
+    <!-- Pattern Dots inside Main Card -->
+    <g opacity="0.15">
+      <circle cx="40" cy="40" r="3" fill="#000" />
+      <circle cx="70" cy="40" r="3" fill="#000" />
+      <circle cx="100" cy="40" r="3" fill="#000" />
+      <circle cx="130" cy="40" r="3" fill="#000" />
+      <circle cx="40" cy="70" r="3" fill="#000" />
+      <circle cx="70" cy="70" r="3" fill="#000" />
+      <circle cx="100" cy="70" r="3" fill="#000" />
+      <circle cx="130" cy="70" r="3" fill="#000" />
+      <circle cx="40" cy="100" r="3" fill="#000" />
+      <circle cx="70" cy="100" r="3" fill="#000" />
+      <circle cx="100" cy="100" r="3" fill="#000" />
+      <circle cx="130" cy="100" r="3" fill="#000" />
+    </g>
+
+    <!-- Top Left Neo Tag -->
+    <g transform="translate(30, 24)">
+      <rect x="4" y="4" width="170" height="28" rx="6" fill="#000" />
+      <rect x="0" y="0" width="170" height="28" rx="6" class="neo-pill-cyan" />
+      <text x="85" y="19" text-anchor="middle" class="neo-badge-text">⚡ FULL-STACK ARCHITECT</text>
+    </g>
+
+    <!-- Top Right Neo Tag -->
+    <g transform="translate(560, 24)">
+      <rect x="4" y="4" width="180" height="28" rx="6" fill="#000" />
+      <rect x="0" y="0" width="180" height="28" rx="6" class="neo-pill-green" />
+      <text x="90" y="19" text-anchor="middle" class="neo-badge-text">★ B.TECH UNDERGRAD</text>
+    </g>
+
+    <!-- Center Yellow Hero Name Box -->
+    <g transform="translate(30, 62)">
+      <!-- Name Shadow -->
+      <rect x="8" y="8" width="710" height="105" rx="10" fill="#000000" />
+      <!-- Name Card -->
+      <rect x="0" y="0" width="710" height="105" rx="10" class="neo-inner-card" />
+
+      <!-- Retro Starburst Decor Left -->
+      <path d="M 45 28 L 50 42 L 64 45 L 50 50 L 45 64 L 40 50 L 26 45 L 40 42 Z" fill="#FF2E93" stroke="#000" stroke-width="2.5" />
+      <circle cx="75" cy="28" r="4" fill="#000" />
+
+      <!-- The NAME: ROSHAN with 3D Neobrutalist Offset Shadow -->
+      <!-- White Highlight Underlay -->
+      <text x="357" y="78" text-anchor="middle" class="neo-text-title-shadow">ROSHAN</text>
+      <!-- Solid Black Overlay -->
+      <text x="355" y="76" text-anchor="middle" class="neo-text-title">ROSHAN</text>
+
+      <!-- Retro Starburst Decor Right -->
+      <path d="M 665 42 L 670 56 L 684 59 L 670 64 L 665 78 L 660 64 L 646 59 L 660 56 Z" fill="#00F0FF" stroke="#000" stroke-width="2.5" />
+      <circle cx="635" cy="35" r="4" fill="#000" />
+
+      <!-- Subtitle sticker on bottom right of name box -->
+      <g transform="translate(480, 72) rotate(-3)">
+        <rect x="3" y="3" width="200" height="24" rx="4" fill="#000" />
+        <rect x="0" y="0" width="200" height="24" rx="4" class="neo-pill-pink" />
+        <text x="100" y="16" text-anchor="middle" class="neo-mono" fill="#FFF" font-size="11">🚀 CRAFTING FUTURE WEB</text>
+      </g>
+    </g>
+  </g>
+</svg>

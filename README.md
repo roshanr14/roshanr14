@@ -90,16 +90,18 @@
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=roshanr14&theme=tokyonight&border=00f0ff&background=060913&ring=00f0ff&fire=a855f7&currStreakLabel=00f0ff&stroke=00f0ff&sideLabels=f8fafc" alt="GitHub Streak" width="95%" />
 </p>
 
-#### 📈 **`CONTRIBUTION_GRAPH // REAL-TIME ACTIVITY`**
+#### 🏆 **`GITHUB_TROPHIES & ACHIEVEMENTS`**
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=roshanr14&theme=tokyo-night&bg_color=060913&color=00f0ff&line=a855f7&point=ff0055&area=true&hide_border=false&border_color=00f0ff" alt="Roshan's Contribution Activity Graph" width="95%" />
+  <img src="https://github-profile-trophy.vercel.app/?username=roshanr14&theme=tokyonight&margin_w=10&margin_h=10&no-bg=true&no-frame=false" alt="Roshan's GitHub Trophies" width="100%" />
 </p>
 
-#### 🟩 **`CONTRIBUTION_CALENDAR_GRID`**
+#### 🟩 **`CONTRIBUTION_CALENDAR_HEATMAP (365 DAYS)`**
 
 <p align="center">
-  <img src="https://ghchart.rshah.org/00f0ff/roshanr14" alt="Roshan's 365 Days Contribution Chart" width="95%" />
+  <a href="https://github.com/roshanr14">
+    <img src="https://ghchart.rshah.org/00f0ff/roshanr14" alt="Roshan's 365 Days Contribution Chart" width="100%" />
+  </a>
 </p>
 
 ---

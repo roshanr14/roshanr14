@@ -1,6 +1,10 @@
 <p align="center">
   <a href="https://github.com/roshanr14">
-    <img src="https://raw.githubusercontent.com/roshanr14/roshanr14/main/assets/roshan-warriors-duel.svg" width="100%" alt="⚡ ROSHAN ⚡ Neo-Futurism Warriors Duel" />
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="assets/roshan-warriors-duel.svg">
+      <source media="(prefers-color-scheme: light)" srcset="assets/roshan-warriors-duel.svg">
+      <img src="assets/roshan-warriors-duel.svg" width="100%" alt="⚡ ROSHAN ⚡ Neo-Futurism Warriors Duel" />
+    </picture>
   </a>
 </p>
 

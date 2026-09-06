@@ -1,17 +1,19 @@
 /**
- * ROSHAN // CYBER PORTFOLIO MAIN SCRIPT
+ * ROSHAN // 3D CYBER ENGINE & PORTFOLIO SCRIPT
  * Features:
- * - Dynamic Canvas Particle & Cyber Constellation Animation
- * - Interactive Typewriter Effect
- * - Interactive Terminal CLI (about, skills, projects, contact, etc.)
+ * - 3D Interactive Projected Cyber Polyhedron & Particle Matrix (Canvas 3D Engine)
+ * - 3D Perspective Wave Grid Horizon
+ * - Real-time 3D Mouse Parallax & Dynamic Hologram Tilt
+ * - Typewriter Interactive Effect
+ * - Interactive Terminal CLI with Auto-Suggestions
  * - Project Category Filter Engine
- * - Web Audio API Synthesized Cyber Audio Feedback (No external audio files required)
- * - Seamless Nav Scroll Spy & Mobile Menu Toggle
- * - Copy GitHub README to Clipboard with Toast Notifications
+ * - Web Audio API Synthesized Cyber SFX
+ * - Scroll Spy & Notification Engine
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  initCyberCanvas();
+  init3DCyberCanvas();
+  init3DParallaxTilt();
   initTypewriter();
   initTerminalCLI();
   initProjectFilters();
@@ -23,9 +25,9 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* ==========================================================================
-   1. CYBER CANVAS PARTICLES & CONSTELLATION GRID
+   1. 3D CYBER CANVAS ENGINE (PROJECTED 3D SPHERE, RINGS & PERSPECTIVE GRID)
    ========================================================================== */
-function initCyberCanvas() {
+function init3DCyberCanvas() {
   const canvas = document.getElementById('cyber-canvas');
   if (!canvas) return;
   const ctx = canvas.getContext('2d');
@@ -38,103 +40,305 @@ function initCyberCanvas() {
     height = canvas.height = window.innerHeight;
   });
 
-  const mouse = { x: null, y: null, radius: 140 };
+  const mouse = {
+    x: width / 2,
+    y: height / 2,
+    targetX: 0,
+    targetY: 0,
+    currentX: 0,
+    currentY: 0
+  };
+
   window.addEventListener('mousemove', (e) => {
-    mouse.x = e.x;
-    mouse.y = e.y;
+    mouse.x = e.clientX;
+    mouse.y = e.clientY;
+    mouse.targetX = (e.clientX - width / 2) * 0.0006;
+    mouse.targetY = (e.clientY - height / 2) * 0.0006;
   });
 
-  window.addEventListener('mouseout', () => {
-    mouse.x = null;
-    mouse.y = null;
-  });
+  // 3D Sphere and Ring Point Cloud
+  const points = [];
+  const sphereRadius = Math.min(width, height) * 0.28;
+  const numPoints = 160;
 
-  // Create particles
-  const particleCount = Math.min(Math.floor((width * height) / 12000), 85);
-  const particles = [];
+  // Generate 3D Fibonacci Sphere
+  for (let i = 0; i < numPoints; i++) {
+    const phi = Math.acos(1 - (2 * (i + 0.5)) / numPoints);
+    const theta = Math.PI * (1 + Math.sqrt(5)) * i;
 
-  class Particle {
-    constructor() {
-      this.x = Math.random() * width;
-      this.y = Math.random() * height;
-      this.vx = (Math.random() - 0.5) * 0.8;
-      this.vy = (Math.random() - 0.5) * 0.8;
-      this.size = Math.random() * 2 + 1;
-      this.color = Math.random() > 0.4 ? 'rgba(0, 240, 255, ' : 'rgba(168, 85, 247, ';
-      this.alpha = Math.random() * 0.5 + 0.2;
-    }
-
-    update() {
-      this.x += this.vx;
-      this.y += this.vy;
-
-      if (this.x < 0 || this.x > width) this.vx *= -1;
-      if (this.y < 0 || this.y > height) this.vy *= -1;
-
-      // Mouse interaction
-      if (mouse.x !== null && mouse.y !== null) {
-        const dx = mouse.x - this.x;
-        const dy = mouse.y - this.y;
-        const dist = Math.sqrt(dx * dx + dy * dy);
-        if (dist < mouse.radius) {
-          const force = (mouse.radius - dist) / mouse.radius;
-          const angle = Math.atan2(dy, dx);
-          this.x -= Math.cos(angle) * force * 2.5;
-          this.y -= Math.sin(angle) * force * 2.5;
-        }
-      }
-    }
-
-    draw() {
-      ctx.beginPath();
-      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-      ctx.fillStyle = this.color + this.alpha + ')';
-      ctx.shadowBlur = 8;
-      ctx.shadowColor = '#00f0ff';
-      ctx.fill();
-    }
+    points.push({
+      x: sphereRadius * Math.sin(phi) * Math.cos(theta),
+      y: sphereRadius * Math.sin(phi) * Math.sin(theta),
+      z: sphereRadius * Math.cos(phi),
+      baseX: sphereRadius * Math.sin(phi) * Math.cos(theta),
+      baseY: sphereRadius * Math.sin(phi) * Math.sin(theta),
+      baseZ: sphereRadius * Math.cos(phi),
+      color: i % 3 === 0 ? '#00f0ff' : i % 3 === 1 ? '#a855f7' : '#38bdf8',
+      size: Math.random() * 2 + 1.2
+    });
   }
 
-  for (let i = 0; i < particleCount; i++) {
-    particles.push(new Particle());
+  // Generate 3D Orbiting Ring
+  const ringPoints = [];
+  const ringRadius = sphereRadius * 1.45;
+  const ringCount = 80;
+  for (let i = 0; i < ringCount; i++) {
+    const angle = (i / ringCount) * Math.PI * 2;
+    ringPoints.push({
+      x: ringRadius * Math.cos(angle),
+      y: (Math.random() - 0.5) * 15,
+      z: ringRadius * Math.sin(angle),
+      baseX: ringRadius * Math.cos(angle),
+      baseY: (Math.random() - 0.5) * 15,
+      baseZ: ringRadius * Math.sin(angle),
+      color: '#00f0ff',
+      size: 1.8
+    });
   }
 
-  function animate() {
+  // Floating background cyber dust
+  const dustParticles = [];
+  const dustCount = 45;
+  for (let i = 0; i < dustCount; i++) {
+    dustParticles.push({
+      x: (Math.random() - 0.5) * width * 1.5,
+      y: (Math.random() - 0.5) * height * 1.5,
+      z: (Math.random() - 0.5) * 600,
+      vx: (Math.random() - 0.5) * 0.4,
+      vy: (Math.random() - 0.5) * 0.4,
+      vz: (Math.random() - 0.5) * 0.4
+    });
+  }
+
+  let angleX = 0;
+  let angleY = 0;
+  let angleZ = 0;
+  let gridOffset = 0;
+
+  function render() {
     ctx.clearRect(0, 0, width, height);
 
-    // Connect particles
-    for (let i = 0; i < particles.length; i++) {
-      for (let j = i + 1; j < particles.length; j++) {
-        const dx = particles[i].x - particles[j].x;
-        const dy = particles[i].y - particles[j].y;
+    // Smooth camera mouse dampening
+    mouse.currentX += (mouse.targetX - mouse.currentX) * 0.05;
+    mouse.currentY += (mouse.targetY - mouse.currentY) * 0.05;
+
+    angleY += 0.005 + mouse.currentX;
+    angleX += 0.003 + mouse.currentY;
+    angleZ += 0.002;
+    gridOffset = (gridOffset + 0.5) % 40;
+
+    const fov = 480;
+    const centerX = width > 992 ? width * 0.72 : width * 0.5;
+    const centerY = height * 0.48;
+
+    // 1. Draw 3D Perspective Grid at Bottom
+    draw3DGrid(ctx, width, height, gridOffset, mouse.currentX);
+
+    // 2. Project and Draw 3D Point Cloud Sphere
+    const projectedPoints = [];
+
+    points.forEach((p) => {
+      // Rotate 3D Euler
+      let x1 = p.baseX * Math.cos(angleY) - p.baseZ * Math.sin(angleY);
+      let z1 = p.baseZ * Math.cos(angleY) + p.baseX * Math.sin(angleY);
+
+      let y2 = p.baseY * Math.cos(angleX) - z1 * Math.sin(angleX);
+      let z2 = z1 * Math.cos(angleX) + p.baseY * Math.sin(angleX);
+
+      let x3 = x1 * Math.cos(angleZ) - y2 * Math.sin(angleZ);
+      let y3 = y2 * Math.cos(angleZ) + x1 * Math.sin(angleZ);
+
+      // Perspective projection
+      const scale = fov / (fov + z2);
+      const projX = x3 * scale + centerX;
+      const projY = y3 * scale + centerY;
+
+      if (scale > 0) {
+        projectedPoints.push({
+          x: projX,
+          y: projY,
+          z: z2,
+          scale: scale,
+          color: p.color,
+          size: p.size * scale
+        });
+      }
+    });
+
+    // Sort by Z for realistic depth
+    projectedPoints.sort((a, b) => a.z - b.z);
+
+    // Draw 3D Cyber Geometric Connections
+    for (let i = 0; i < projectedPoints.length; i++) {
+      for (let j = i + 1; j < projectedPoints.length; j++) {
+        const dx = projectedPoints[i].x - projectedPoints[j].x;
+        const dy = projectedPoints[i].y - projectedPoints[j].y;
         const dist = Math.sqrt(dx * dx + dy * dy);
 
-        if (dist < 130) {
+        if (dist < 65) {
           ctx.beginPath();
-          ctx.moveTo(particles[i].x, particles[i].y);
-          ctx.lineTo(particles[j].x, particles[j].y);
-          const lineAlpha = (1 - dist / 130) * 0.22;
-          ctx.strokeStyle = `rgba(0, 240, 255, ${lineAlpha})`;
+          ctx.moveTo(projectedPoints[i].x, projectedPoints[i].y);
+          ctx.lineTo(projectedPoints[j].x, projectedPoints[j].y);
+          const alpha = (1 - dist / 65) * 0.18 * projectedPoints[i].scale;
+          ctx.strokeStyle = `rgba(0, 240, 255, ${alpha})`;
           ctx.lineWidth = 0.8;
-          ctx.shadowBlur = 0;
           ctx.stroke();
         }
       }
     }
 
-    particles.forEach((p) => {
-      p.update();
-      p.draw();
+    // Draw 3D projected nodes with depth glow
+    projectedPoints.forEach((p) => {
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, Math.max(0.5, p.size), 0, Math.PI * 2);
+      ctx.fillStyle = p.color;
+      ctx.shadowBlur = p.z > 0 ? 12 : 3;
+      ctx.shadowColor = p.color;
+      ctx.globalAlpha = Math.max(0.2, (p.z + sphereRadius) / (sphereRadius * 2));
+      ctx.fill();
+      ctx.globalAlpha = 1.0;
+      ctx.shadowBlur = 0;
     });
 
-    requestAnimationFrame(animate);
+    // 3. Project and Draw 3D Orbiting Ring
+    ringPoints.forEach((p) => {
+      // Tilt ring by 45 deg + rotate
+      const tiltAngle = Math.PI / 3.5;
+      let y0 = p.baseY * Math.cos(tiltAngle) - p.baseZ * Math.sin(tiltAngle);
+      let z0 = p.baseZ * Math.cos(tiltAngle) + p.baseY * Math.sin(tiltAngle);
+
+      let x1 = p.baseX * Math.cos(-angleY * 1.5) - z0 * Math.sin(-angleY * 1.5);
+      let z1 = z0 * Math.cos(-angleY * 1.5) + p.baseX * Math.sin(-angleY * 1.5);
+
+      const scale = fov / (fov + z1);
+      const projX = x1 * scale + centerX;
+      const projY = y0 * scale + centerY;
+
+      if (scale > 0) {
+        ctx.beginPath();
+        ctx.arc(projX, projY, Math.max(0.6, p.size * scale), 0, Math.PI * 2);
+        ctx.fillStyle = '#00f0ff';
+        ctx.shadowBlur = 10;
+        ctx.shadowColor = '#00f0ff';
+        ctx.globalAlpha = Math.max(0.2, (z1 + ringRadius) / (ringRadius * 2));
+        ctx.fill();
+        ctx.globalAlpha = 1.0;
+        ctx.shadowBlur = 0;
+      }
+    });
+
+    // 4. Background Dust particles
+    dustParticles.forEach((d) => {
+      d.x += d.vx;
+      d.y += d.vy;
+      d.z += d.vz;
+
+      if (d.x < -width) d.x = width;
+      if (d.x > width) d.x = -width;
+      if (d.y < -height) d.y = height;
+      if (d.y > height) d.y = -height;
+      if (d.z < -300) d.z = 300;
+      if (d.z > 300) d.z = -300;
+
+      const scale = fov / (fov + d.z + 400);
+      const projX = d.x * scale + width / 2;
+      const projY = d.y * scale + height / 2;
+
+      ctx.beginPath();
+      ctx.arc(projX, projY, Math.max(0.4, 1.2 * scale), 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(168, 85, 247, 0.4)';
+      ctx.fill();
+    });
+
+    requestAnimationFrame(render);
   }
 
-  animate();
+  render();
+}
+
+function draw3DGrid(ctx, width, height, offset, mouseTilt) {
+  const horizonY = height * 0.65;
+  const gridWidth = width * 1.4;
+  const startX = -width * 0.2;
+
+  ctx.save();
+  // Draw glowing horizon laser line
+  const horizonGrad = ctx.createLinearGradient(0, horizonY, width, horizonY);
+  horizonGrad.addColorStop(0, 'transparent');
+  horizonGrad.addColorStop(0.3, 'rgba(0, 240, 255, 0.2)');
+  horizonGrad.addColorStop(0.5, 'rgba(168, 85, 247, 0.5)');
+  horizonGrad.addColorStop(0.7, 'rgba(0, 240, 255, 0.2)');
+  horizonGrad.addColorStop(1, 'transparent');
+
+  ctx.beginPath();
+  ctx.moveTo(0, horizonY);
+  ctx.lineTo(width, horizonY);
+  ctx.strokeStyle = horizonGrad;
+  ctx.lineWidth = 1.5;
+  ctx.stroke();
+
+  // Perspective vertical lines converging to vanishing point
+  const vanishingX = width * 0.5 + mouseTilt * 400;
+  const linesCount = 28;
+
+  for (let i = 0; i <= linesCount; i++) {
+    const bottomX = startX + (i / linesCount) * gridWidth;
+    ctx.beginPath();
+    ctx.moveTo(vanishingX, horizonY);
+    ctx.lineTo(bottomX, height);
+    ctx.strokeStyle = 'rgba(0, 240, 255, 0.04)';
+    ctx.lineWidth = 1;
+    ctx.stroke();
+  }
+
+  // Perspective horizontal lines moving forward
+  for (let y = horizonY; y < height; y += (y - horizonY + 12) * 0.25) {
+    const currentY = y + (offset % 15);
+    if (currentY > horizonY && currentY < height) {
+      const alpha = ((currentY - horizonY) / (height - horizonY)) * 0.08;
+      ctx.beginPath();
+      ctx.moveTo(0, currentY);
+      ctx.lineTo(width, currentY);
+      ctx.strokeStyle = `rgba(0, 240, 255, ${alpha})`;
+      ctx.lineWidth = 1;
+      ctx.stroke();
+    }
+  }
+
+  ctx.restore();
 }
 
 /* ==========================================================================
-   2. TYPEWRITER EFFECT
+   2. 3D PARALLAX TILT ON HERO NAME & CARDS
+   ========================================================================== */
+function init3DParallaxTilt() {
+  const heroVisual = document.querySelector('.hero-visual');
+  const heroName = document.querySelector('.hero-name');
+  const heroContent = document.querySelector('.hero-content');
+
+  if (!heroVisual && !heroName) return;
+
+  document.addEventListener('mousemove', (e) => {
+    const x = (e.clientX / window.innerWidth - 0.5) * 2;
+    const y = (e.clientY / window.innerHeight - 0.5) * 2;
+
+    if (heroName) {
+      heroName.style.transform = `perspective(800px) rotateY(${x * 12}deg) rotateX(${-y * 12}deg) translateZ(20px)`;
+    }
+
+    if (heroVisual) {
+      heroVisual.style.transform = `perspective(1000px) rotateY(${x * 8}deg) rotateX(${-y * 8}deg)`;
+    }
+  });
+
+  document.addEventListener('mouseleave', () => {
+    if (heroName) heroName.style.transform = 'perspective(800px) rotateY(0deg) rotateX(0deg) translateZ(0)';
+    if (heroVisual) heroVisual.style.transform = 'perspective(1000px) rotateY(0deg) rotateX(0deg)';
+  });
+}
+
+/* ==========================================================================
+   3. TYPEWRITER EFFECT
    ========================================================================== */
 function initTypewriter() {
   const target = document.getElementById('typewriter');
@@ -142,16 +346,16 @@ function initTypewriter() {
 
   const phrases = [
     'Engineering Student // B.Tech Undergrad',
-    'Full-Stack Web Developer',
-    'JavaScript & React Enthusiast',
-    'REST APIs & Backend Architect',
-    'Problem Solver & Creative Coder'
+    'Full-Stack Web Developer & Architect',
+    'JavaScript & React.js Specialist',
+    'RESTful APIs & High-Scale Systems',
+    'Problem Solver & Creative Technologist'
   ];
 
   let phraseIndex = 0;
   let charIndex = 0;
   let isDeleting = false;
-  let typingSpeed = 90;
+  let typingSpeed = 85;
 
   function type() {
     const currentPhrase = phrases[phraseIndex];
@@ -159,20 +363,20 @@ function initTypewriter() {
     if (isDeleting) {
       target.textContent = currentPhrase.substring(0, charIndex - 1);
       charIndex--;
-      typingSpeed = 40;
+      typingSpeed = 35;
     } else {
       target.textContent = currentPhrase.substring(0, charIndex + 1);
       charIndex++;
-      typingSpeed = 90;
+      typingSpeed = 85;
     }
 
     if (!isDeleting && charIndex === currentPhrase.length) {
       isDeleting = true;
-      typingSpeed = 1800; // Pause at end
+      typingSpeed = 1900;
     } else if (isDeleting && charIndex === 0) {
       isDeleting = false;
       phraseIndex = (phraseIndex + 1) % phrases.length;
-      typingSpeed = 400; // Pause before new word
+      typingSpeed = 350;
     }
 
     setTimeout(type, typingSpeed);
@@ -182,7 +386,7 @@ function initTypewriter() {
 }
 
 /* ==========================================================================
-   3. INTERACTIVE TERMINAL CLI
+   4. INTERACTIVE TERMINAL CLI
    ========================================================================== */
 function initTerminalCLI() {
   const input = document.getElementById('terminal-cli-input');
@@ -227,7 +431,7 @@ function initTerminalCLI() {
     contact: `
 <div class="t-line t-cyan">-- TRANSMISSION CHANNELS --</div>
 <div class="t-line">Email:    <a href="mailto:roshan.dev@example.com" class="t-yellow">roshan.dev@example.com</a></div>
-<div class="t-line">GitHub:   <a href="https://github.com" target="_blank" class="t-yellow">github.com</a></div>
+<div class="t-line">GitHub:   <a href="https://github.com/roshanr14" target="_blank" class="t-yellow">github.com/roshanr14</a></div>
 <div class="t-line">LinkedIn: <a href="https://linkedin.com" target="_blank" class="t-yellow">linkedin.com/in/roshan</a></div>
 `,
     whoami: `
@@ -237,8 +441,6 @@ function initTerminalCLI() {
 
   function executeCommand(cmdText) {
     const cleanCmd = cmdText.trim().toLowerCase();
-    
-    // Play subtle audio if enabled
     playCyberSound('beep');
 
     if (cleanCmd === 'clear') {
@@ -254,7 +456,7 @@ function initTerminalCLI() {
     if (commands[cleanCmd]) {
       commandEntry.innerHTML += commands[cleanCmd];
     } else if (cleanCmd === '') {
-      // Do nothing for blank enter
+      // blank
     } else {
       commandEntry.innerHTML += `<div class="t-line t-muted">zsh: command not found: ${escapeHtml(cleanCmd)}. Type <span class="t-yellow">'help'</span> for list of commands.</div>`;
     }
@@ -262,7 +464,6 @@ function initTerminalCLI() {
     history.appendChild(commandEntry);
     input.value = '';
 
-    // Scroll to bottom
     const screen = document.getElementById('interactive-screen');
     if (screen) {
       screen.scrollTop = screen.scrollHeight;
@@ -290,7 +491,7 @@ function escapeHtml(text) {
 }
 
 /* ==========================================================================
-   4. PROJECT FILTER ENGINE
+   5. PROJECT FILTER ENGINE
    ========================================================================== */
 function initProjectFilters() {
   const filterBtns = document.querySelectorAll('.filter-btn');
@@ -327,7 +528,7 @@ function initProjectFilters() {
 }
 
 /* ==========================================================================
-   5. WEB AUDIO API SYNTHESIZED CYBER SFX
+   6. WEB AUDIO API SYNTHESIZED CYBER SFX
    ========================================================================== */
 let audioCtx = null;
 let soundEnabled = true;
@@ -384,12 +585,12 @@ function playCyberSound(type) {
       osc.stop(now + 0.04);
     }
   } catch (e) {
-    // Gracefully handle browser autoplay policies
+    // browser policy fallback
   }
 }
 
 /* ==========================================================================
-   6. NAVIGATION, MOBILE MENU & SCROLL SPY
+   7. NAVIGATION, MOBILE MENU & SCROLL SPY
    ========================================================================== */
 function initNavigation() {
   const header = document.getElementById('header');
@@ -398,7 +599,6 @@ function initNavigation() {
   const navLinks = document.querySelectorAll('.nav-link');
   const sections = document.querySelectorAll('section[id]');
 
-  // Scroll sticky navbar
   window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
       header.classList.add('scrolled');
@@ -406,7 +606,6 @@ function initNavigation() {
       header.classList.remove('scrolled');
     }
 
-    // Scroll Spy active link
     let current = '';
     const scrollPosition = window.scrollY + 150;
 
@@ -426,7 +625,6 @@ function initNavigation() {
     });
   });
 
-  // Mobile menu toggle
   if (menuToggle && nav) {
     menuToggle.addEventListener('click', () => {
       nav.classList.toggle('open');
@@ -443,7 +641,7 @@ function initNavigation() {
 }
 
 /* ==========================================================================
-   7. CONTACT FORM SUBMISSION
+   8. CONTACT FORM SUBMISSION
    ========================================================================== */
 function initContactForm() {
   const form = document.getElementById('contact-form');
@@ -467,7 +665,6 @@ function initContactForm() {
       return;
     }
 
-    // Email regex validation
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailPattern.test(email)) {
       feedback.className = 'form-feedback error';
@@ -475,7 +672,6 @@ function initContactForm() {
       return;
     }
 
-    // Simulate sending transmission
     submitBtn.disabled = true;
     submitBtn.innerHTML = '<span class="btn-content"><i class="fa-solid fa-spinner fa-spin"></i> ENCRYPTING & TRANSMITTING...</span>';
 
@@ -493,7 +689,7 @@ function initContactForm() {
 }
 
 /* ==========================================================================
-   8. COPY GITHUB README TO CLIPBOARD
+   9. COPY GITHUB README TO CLIPBOARD
    ========================================================================== */
 function initCopyReadme() {
   const copyBtn = document.getElementById('copy-readme-btn');
@@ -508,14 +704,13 @@ function initCopyReadme() {
       await navigator.clipboard.writeText(text);
       showToast('⚡ README.md copied to clipboard!');
     } catch (err) {
-      // Fallback
       showToast('⚠️ Copied preview snippet to clipboard!');
     }
   });
 }
 
 /* ==========================================================================
-   9. TOAST NOTIFICATION UTILITY
+   10. TOAST NOTIFICATION UTILITY
    ========================================================================== */
 function showToast(message) {
   const container = document.getElementById('toast-container');
@@ -536,7 +731,7 @@ function showToast(message) {
 }
 
 /* ==========================================================================
-   10. CURRENT YEAR IN FOOTER
+   11. CURRENT YEAR IN FOOTER
    ========================================================================== */
 function initCurrentYear() {
   const yearEl = document.getElementById('current-year');

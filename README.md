@@ -1,10 +1,10 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=00f0ff,0284c7,3b82f6,6366f1,a855f7,00f0ff&height=220&section=header&text=⚡%20ROSHAN%20⚡&fontSize=54&fontAlignY=38&animation=twinkling&fontColor=ffffff&desc=Engineering%20Student%20%E2%80%A2%20Full-Stack%20Web%20Developer&descSize=20&descAlignY=62&descColor=00f0ff" width="100%" alt="Roshan Banner" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=00f0ff,0284c7,3b82f6,6366f1,a855f7,00f0ff&height=240&section=header&text=⚡%20ROSHAN%20⚡&fontSize=58&fontAlignY=36&animation=twinkling&fontColor=ffffff&desc=Engineering%20Student%20%E2%80%A2%20Full-Stack%20Web%20Developer&descSize=21&descAlignY=60&descColor=00f0ff&stroke=00f0ff&strokeWidth=2" width="100%" alt="Roshan 3D Cyber Banner" />
 </p>
 
 <p align="center">
   <a href="https://github.com/roshanr14">
-    <img src="https://readme-typing-svg.herokuapp.com?font=Space+Grotesk&weight=800&size=24&duration=2500&pause=1000&color=00F0FF&center=true&vCenter=true&width=650&lines=👋+HI+THERE%2C+I'M+ROSHAN;⚡+ENGINEERING+STUDENT+%26+TECH+ENTHUSIAST;💻+FULL-STACK+WEB+DEVELOPER;🚀+TURNING+IDEAS+INTO+DYNAMIC+EXPERIENCES" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.herokuapp.com?font=Space+Grotesk&weight=800&size=26&duration=2400&pause=900&color=00F0FF&center=true&vCenter=true&multiline=true&width=750&height=110&lines=👋+HI+THERE%2C+I'M+ROSHAN!;⚡+ENGINEERING+STUDENT+%26+BUILDER;💻+FULL-STACK+WEB+DEVELOPER;🚀+EXPERIENCE+THE+INTERACTIVE+3D+PORTFOLIO" alt="Typing SVG" />
   </a>
 </p>
 

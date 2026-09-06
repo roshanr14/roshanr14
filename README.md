@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/roshanr14">
-    <img src="https://raw.githubusercontent.com/roshanr14/roshanr14/main/assets/roshan-lone-warrior.svg" width="100%" alt="⚡ ROSHAN ⚡ Neo-Futurism Lone Warrior" />
+    <img src="https://raw.githubusercontent.com/roshanr14/roshanr14/main/assets/roshan-warriors-duel.svg" width="100%" alt="⚡ ROSHAN ⚡ Neo-Futurism Warriors Duel" />
   </a>
 </p>
 

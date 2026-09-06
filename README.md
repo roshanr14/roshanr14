@@ -79,13 +79,57 @@
 
 ---
 
-### 📊 **`GITHUB_ACTIVITY & CONTRIBUTION_METRICS`**
+### 📊 **`CYBER_MATRIX // GITHUB_CONTRIBUTIONS & ACTIVITY`**
+
+<div align="center">
+
+<a href="https://github.com/roshanr14">
+  <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fgithub-contributions-api.jogruber.de%2Fv4%2Froshanr14&query=%24.total%5B'2026'%5D&suffix=%20Contributions&label=⚡%202026%20TOTAL%20CONTRIBUTIONS&color=00f0ff&style=for-the-badge&logo=github&logoColor=black" alt="Total GitHub Contributions" />
+</a>
+<a href="https://github.com/roshanr14">
+  <img src="https://img.shields.io/badge/Current%20Status-Active%20Builder-a855f7?style=for-the-badge&logo=git&logoColor=white" alt="Active Builder" />
+</a>
+<a href="https://github.com/roshanr14">
+  <img src="https://img.shields.io/badge/Dev%20Focus-Full--Stack%20%26%20DSA-ff0055?style=for-the-badge&logo=codeforces&logoColor=white" alt="Dev Focus" />
+</a>
+
+</div>
+
+<br>
+
+#### 🏙️ **`3D_ISOMETRIC_CONTRIBUTION_CITY`**
 
 <p align="center">
   <a href="https://github.com/roshanr14">
-    <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fgithub-contributions-api.jogruber.de%2Fv4%2Froshanr14&query=%24.total%5B'2026'%5D&suffix=%20Contributions&label=⚡%20TOTAL%20CONTRIBUTIONS&color=00f0ff&style=for-the-badge&logo=github&logoColor=black" alt="Total GitHub Contributions" />
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="profile-3d-contrib/profile-night-rainbow.svg">
+      <source media="(prefers-color-scheme: light)" srcset="profile-3d-contrib/profile-night-rainbow.svg">
+      <img src="profile-3d-contrib/profile-night-rainbow.svg" alt="Roshan's 3D Isometric Contribution City" width="100%" />
+    </picture>
   </a>
 </p>
+
+#### 🐍 **`CYBERPUNK_CONTRIBUTION_SNAKE_GRID`**
+
+<p align="center">
+  <a href="https://github.com/roshanr14">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/roshanr14/roshanr14/output/github-contribution-grid-snake-dark.svg">
+      <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/roshanr14/roshanr14/output/github-contribution-grid-snake.svg">
+      <img alt="GitHub Contribution Grid Snake" src="https://raw.githubusercontent.com/roshanr14/roshanr14/output/github-contribution-grid-snake-dark.svg" width="100%" />
+    </picture>
+  </a>
+</p>
+
+#### 🟩 **`365-DAY_CONTRIBUTION_CALENDAR_HEATMAP`**
+
+<p align="center">
+  <a href="https://github.com/roshanr14">
+    <img src="https://ghchart.rshah.org/00f0ff/roshanr14" alt="Roshan's 365 Days Contribution Chart" width="100%" />
+  </a>
+</p>
+
+#### ⚡ **`ANALYTICS_ARSENAL & REPOSITORY_METRICS`**
 
 <p align="center">
   <a href="https://github.com/roshanr14">
@@ -98,14 +142,6 @@
 
 <p align="center">
   <a href="https://github.com/roshanr14">
-    <img src="https://streak-stats.demolab.com/?user=roshanr14&theme=tokyonight&border=00f0ff&background=060913&ring=00f0ff&fire=a855f7&currStreakLabel=00f0ff&stroke=00f0ff&sideLabels=f8fafc&cache_seconds=1800" alt="GitHub Streak" width="95%" />
-  </a>
-</p>
-
-#### ⚡ **`PROFILE_ACTIVITY & COMMIT_ANALYTICS`**
-
-<p align="center">
-  <a href="https://github.com/roshanr14">
     <img src="profile-summary-card-output/tokyonight/0-profile-details.svg" alt="Roshan's Profile Activity Details" width="48%" />
   </a>
   <a href="https://github.com/roshanr14">
@@ -113,23 +149,9 @@
   </a>
 </p>
 
-#### 🟩 **`365-DAY_CONTRIBUTION_CALENDAR_HEATMAP`**
-
 <p align="center">
   <a href="https://github.com/roshanr14">
-    <img src="https://ghchart.rshah.org/00f0ff/roshanr14" alt="Roshan's 365 Days Contribution Chart" width="100%" />
-  </a>
-</p>
-
-#### 🐍 **`REALTIME_CONTRIBUTION_SNAKE`**
-
-<p align="center">
-  <a href="https://github.com/roshanr14">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/roshanr14/roshanr14/output/github-contribution-grid-snake-dark.svg">
-      <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/roshanr14/roshanr14/output/github-contribution-grid-snake.svg">
-      <img alt="GitHub Contribution Grid Snake" src="https://raw.githubusercontent.com/roshanr14/roshanr14/output/github-contribution-grid-snake-dark.svg" width="100%" />
-    </picture>
+    <img src="https://streak-stats.demolab.com/?user=roshanr14&theme=tokyonight&border=00f0ff&background=060913&ring=00f0ff&fire=a855f7&currStreakLabel=00f0ff&stroke=00f0ff&sideLabels=f8fafc&cache_seconds=1800" alt="GitHub Streak" width="95%" />
   </a>
 </p>
 

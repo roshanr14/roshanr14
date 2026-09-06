@@ -1,89 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 460" width="1000" height="460" fill="none">
   <defs>
-    <!-- Fonts & Styles -->
+    <!-- Fonts & Direct Inline Styles -->
     <style><![CDATA[
-      @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;800;900&family=Rajdhani:wght@600;700&family=JetBrains+Mono:wght@500;700&display=swap');
-
       .font-orbitron { font-family: 'Orbitron', 'Segoe UI', 'Impact', 'Trebuchet MS', -apple-system, sans-serif; }
       .font-rajdhani { font-family: 'Rajdhani', 'Segoe UI', -apple-system, sans-serif; }
       .font-mono { font-family: 'JetBrains Mono', 'Consolas', 'Courier New', monospace; }
-
-      /* 3D Animated Motion & Combat Dynamics */
-      @keyframes pulseGlow {
-        0%, 100% { filter: drop-shadow(0 0 8px rgba(0, 240, 255, 0.7)) drop-shadow(0 0 25px rgba(168, 85, 247, 0.5)); }
-        50% { filter: drop-shadow(0 0 20px rgba(0, 240, 255, 0.95)) drop-shadow(0 0 50px rgba(236, 72, 153, 0.85)); }
-      }
-      @keyframes warriorLeftStance {
-        0%, 100% { transform: translate(0px, 0px) rotate(0deg); }
-        30% { transform: translate(6px, -4px) rotate(0.8deg); }
-        70% { transform: translate(-3px, 2px) rotate(-0.5deg); }
-      }
-      @keyframes warriorRightStance {
-        0%, 100% { transform: translate(0px, 0px) rotate(0deg); }
-        35% { transform: translate(-6px, -4px) rotate(-0.8deg); }
-        75% { transform: translate(3px, 2px) rotate(0.5deg); }
-      }
-      @keyframes bladeLeftSwing {
-        0%, 100% { transform: rotate(0deg); filter: drop-shadow(0 0 10px rgba(0,240,255,0.9)); }
-        50% { transform: rotate(8deg) scale(1.05); filter: drop-shadow(0 0 22px rgba(0,240,255,1)) drop-shadow(0 0 35px rgba(255,255,255,0.8)); }
-      }
-      @keyframes bladeRightSwing {
-        0%, 100% { transform: rotate(0deg); filter: drop-shadow(0 0 10px rgba(255,0,85,0.9)); }
-        50% { transform: rotate(-8deg) scale(1.05); filter: drop-shadow(0 0 22px rgba(255,0,85,1)) drop-shadow(0 0 35px rgba(255,255,255,0.8)); }
-      }
-      @keyframes clashEnergyPulse {
-        0%, 100% { transform: scale(0.85); opacity: 0.6; }
-        45% { transform: scale(1.25); opacity: 1; filter: drop-shadow(0 0 25px rgba(255,255,255,1)) drop-shadow(0 0 50px rgba(0,240,255,0.9)); }
-        55% { transform: scale(1.15); opacity: 0.9; }
-      }
-      @keyframes sparkFly1 {
-        0% { transform: translate(0,0) scale(0.5); opacity: 1; }
-        100% { transform: translate(-60px, -45px) scale(1.4); opacity: 0; }
-      }
-      @keyframes sparkFly2 {
-        0% { transform: translate(0,0) scale(0.5); opacity: 1; }
-        100% { transform: translate(65px, -50px) scale(1.4); opacity: 0; }
-      }
-      @keyframes sparkFly3 {
-        0% { transform: translate(0,0) scale(0.5); opacity: 1; }
-        100% { transform: translate(-25px, -70px) scale(1.2); opacity: 0; }
-      }
-      @keyframes floatShip {
-        0%, 100% { transform: translate(0, 0); }
-        50% { transform: translate(-12px, -6px); }
-      }
-      @keyframes floatMinor {
-        0%, 100% { transform: translate(0, 0); }
-        50% { transform: translate(6px, -4px); }
-      }
-      @keyframes scanBeam {
-        0% { transform: translateY(-40px); opacity: 0; }
-        50% { opacity: 0.85; }
-        100% { transform: translateY(460px); opacity: 0; }
-      }
-      @keyframes holoFlicker {
-        0%, 100% { opacity: 0.95; }
-        22% { opacity: 0.98; }
-        24% { opacity: 0.4; }
-        26% { opacity: 0.95; }
-        68% { opacity: 0.92; }
-        70% { opacity: 0.6; }
-        72% { opacity: 0.98; }
-      }
-
-      .anim-pulse { animation: pulseGlow 4s ease-in-out infinite; }
-      .anim-warrior-left { animation: warriorLeftStance 3.6s ease-in-out infinite; transform-origin: 220px 380px; }
-      .anim-warrior-right { animation: warriorRightStance 3.6s ease-in-out infinite; transform-origin: 780px 380px; }
-      .anim-blade-left { animation: bladeLeftSwing 2.4s ease-in-out infinite; transform-origin: 300px 320px; }
-      .anim-blade-right { animation: bladeRightSwing 2.4s ease-in-out infinite; transform-origin: 700px 320px; }
-      .anim-clash { animation: clashEnergyPulse 1.8s ease-in-out infinite; transform-origin: 500px 330px; }
-      .anim-spark1 { animation: sparkFly1 1.2s cubic-bezier(0.1,0.8,0.3,1) infinite; }
-      .anim-spark2 { animation: sparkFly2 1.4s cubic-bezier(0.1,0.8,0.3,1) infinite; }
-      .anim-spark3 { animation: sparkFly3 1.1s cubic-bezier(0.1,0.8,0.3,1) infinite; }
-      .anim-ship { animation: floatShip 6s ease-in-out infinite; }
-      .anim-ship-minor { animation: floatMinor 8s ease-in-out infinite; }
-      .anim-flicker { animation: holoFlicker 5s steps(10, end) infinite; }
-      .anim-scan { animation: scanBeam 8s linear infinite; }
     ]]></style>
 
     <!-- Glowing Filters -->
@@ -206,8 +127,8 @@
 
     <radialGradient id="clash-burst" cx="50%" cy="50%" r="50%">
       <stop offset="0%" stop-color="#ffffff" stop-opacity="1" />
-      <stop offset="25%" stop-color="#00f0ff" stop-opacity="0.9" />
-      <stop offset="60%" stop-color="#ff007f" stop-opacity="0.6" />
+      <stop offset="25%" stop-color="#00f0ff" stop-opacity="0.95" />
+      <stop offset="60%" stop-color="#ff007f" stop-opacity="0.7" />
       <stop offset="100%" stop-color="#05131c" stop-opacity="0" />
     </radialGradient>
   </defs>
@@ -221,7 +142,7 @@
   <path d="M100,140 Q350,70 600,120 T1050,90 L1050,0 L100,0 Z" fill="#081822" opacity="0.5" />
   <path d="M-20,180 Q250,110 500,160 T1020,130 L1020,240 L-20,240 Z" fill="#0e3240" opacity="0.25" />
 
-  <!-- 2. DEEP BACKGROUND SKYLINE (Distant Spires & Megastructures) -->
+  <!-- 2. DEEP BACKGROUND SKYLINE -->
   <g opacity="0.6">
     <rect x="70" y="160" width="22" height="150" fill="#081621" />
     <polygon points="70,160 81,130 92,160" fill="#081621" />
@@ -250,12 +171,15 @@
     </g>
   </g>
 
-  <!-- Distant Sky Patrol & Drones -->
-  <g opacity="0.7" class="anim-ship-minor">
-    <polygon points="460,78 465,76 468,78 464,80" fill="#000" />
-    <circle cx="464" cy="79" r="1.2" fill="#00f0ff" filter="url(#glow-cyan)" />
-    <polygon points="120,95 124,93 126,95 123,96" fill="#000" />
-    <polygon points="820,115 824,113 826,115 823,116" fill="#000" />
+  <!-- Distant Sky Patrol & Drones with SMIL Hover -->
+  <g opacity="0.7">
+    <g>
+      <polygon points="460,78 465,76 468,78 464,80" fill="#000" />
+      <circle cx="464" cy="79" r="1.2" fill="#00f0ff" filter="url(#glow-cyan)" />
+      <polygon points="120,95 124,93 126,95 123,96" fill="#000" />
+      <polygon points="820,115 824,113 826,115 823,116" fill="#000" />
+      <animateTransform attributeName="transform" type="translate" values="0 0; 8 -5; 0 0" dur="7s" repeatCount="indefinite" />
+    </g>
   </g>
 
   <!-- 3. MIDGROUND ARCHITECTURE & ICONIC SPIRES -->
@@ -270,11 +194,12 @@
     <line x1="262" y1="95" x2="262" y2="300" stroke="#00f0ff" stroke-width="2" filter="url(#glow-cyan)" />
     <line x1="293" y1="95" x2="293" y2="300" stroke="#00f0ff" stroke-width="2" filter="url(#glow-cyan)" />
 
-    <!-- Hanging Infinity Hologram Sign -->
-    <g transform="translate(340, 220)" class="anim-flicker">
+    <!-- Hanging Infinity Hologram Sign (Flickering via SMIL) -->
+    <g transform="translate(340, 220)">
       <rect x="0" y="0" width="46" height="20" rx="3" fill="#0c111e" stroke="#00f0ff" stroke-width="1.2" filter="url(#glow-cyan)" />
       <path d="M12,10 C12,6 18,6 23,10 C28,14 34,14 34,10 C34,6 28,6 23,10 C18,14 12,14 12,10 Z" fill="none" stroke="#ff007f" stroke-width="2.2" filter="url(#glow-magenta)" />
       <circle cx="23" cy="10" r="1.5" fill="#00f0ff" />
+      <animate attributeName="opacity" values="0.95; 0.4; 0.95; 0.95; 0.6; 0.98; 0.95" dur="4s" repeatCount="indefinite" />
     </g>
   </g>
 
@@ -290,10 +215,15 @@
   <rect x="0" y="230" width="1000" height="150" fill="url(#mist-glow)" />
   <rect x="0" y="270" width="1000" height="120" fill="url(#city-fog)" />
 
-  <!-- 4. FLYING SCI-FI GUNSHIPS -->
-  <g transform="translate(560, 95)" class="anim-ship">
-    <ellipse cx="45" cy="22" rx="14" ry="4" fill="#00f0ff" filter="url(#glow-intense)" opacity="0.8" />
-    <ellipse cx="155" cy="18" rx="14" ry="4" fill="#00f0ff" filter="url(#glow-intense)" opacity="0.8" />
+  <!-- 4. FLYING SCI-FI GUNSHIPS with SMIL Motion -->
+  <g transform="translate(560, 95)">
+    <animateTransform attributeName="transform" type="translate" values="560 95; 545 88; 560 95" dur="5.5s" repeatCount="indefinite" />
+    <ellipse cx="45" cy="22" rx="14" ry="4" fill="#00f0ff" filter="url(#glow-intense)">
+      <animate attributeName="opacity" values="0.7; 1; 0.7" dur="1.5s" repeatCount="indefinite" />
+    </ellipse>
+    <ellipse cx="155" cy="18" rx="14" ry="4" fill="#00f0ff" filter="url(#glow-intense)">
+      <animate attributeName="opacity" values="0.7; 1; 0.7" dur="1.5s" repeatCount="indefinite" />
+    </ellipse>
     <path d="M80,30 L110,12 L140,14 L175,24 L190,30 L170,35 L120,38 L85,35 Z" fill="#050d14" />
     <polygon points="150,18 168,23 162,26 146,21" fill="#00f0ff" filter="url(#glow-cyan)" />
     <path d="M95,28 L35,26 L15,32 L40,36 L90,34 Z" fill="#08141d" />
@@ -310,133 +240,167 @@
     <path d="M50,460 L350,345 L650,345 L950,460" stroke="#00f0ff" stroke-width="2" fill="none" opacity="0.7" filter="url(#glow-cyan)" />
     <path d="M180,460 Q340,390 500,360 T820,460" stroke="#ff0055" stroke-width="2.5" fill="none" filter="url(#glow-magenta)" />
     
-    <!-- Central Battle Arena Hexagon -->
-    <polygon points="500,335 560,350 560,385 500,400 440,385 440,350" fill="none" stroke="#00f0ff" stroke-width="1.8" filter="url(#glow-cyan)" opacity="0.8" />
-    <polygon points="500,342 548,354 548,381 500,393 452,381 452,354" fill="none" stroke="#ff007f" stroke-width="1.2" filter="url(#glow-magenta)" opacity="0.8" />
+    <!-- Central Battle Arena Hexagon with Pulsing SMIL -->
+    <polygon points="500,335 560,350 560,385 500,400 440,385 440,350" fill="none" stroke="#00f0ff" stroke-width="1.8" filter="url(#glow-cyan)">
+      <animate attributeName="opacity" values="0.6; 1; 0.6" dur="2s" repeatCount="indefinite" />
+    </polygon>
+    <polygon points="500,342 548,354 548,381 500,393 452,381 452,354" fill="none" stroke="#ff007f" stroke-width="1.2" filter="url(#glow-magenta)">
+      <animate attributeName="opacity" values="0.6; 1; 0.6" dur="2s" repeatCount="indefinite" />
+    </polygon>
     <line x1="200" y1="340" x2="800" y2="340" stroke="#00f0ff" stroke-width="1" opacity="0.3" />
   </g>
 
-  <!-- 6. HERO WARRIOR VS RIVAL WARRIOR (DUEL IN 3D MOTION) -->
+  <!-- 6. HERO WARRIOR VS RIVAL WARRIOR (3D NATIVE SMIL ANIMATIONS) -->
 
   <!-- [WARRIOR 1: LEFT HERO WARRIOR - CYAN PLASMA WEAPON] -->
-  <g class="anim-warrior-left">
-    <g transform="translate(190, 235)">
-      <!-- Ground Shadow -->
-      <ellipse cx="35" cy="192" rx="45" ry="9" fill="#000000" opacity="0.85" />
+  <g transform="translate(190, 235)">
+    <!-- Dynamic Breathing & Combat Motion via SMIL -->
+    <animateTransform attributeName="transform" type="translate" values="190 235; 198 230; 188 237; 190 235" dur="3s" repeatCount="indefinite" />
 
-      <!-- Flowing Combat Trenchcoat / Cape -->
-      <path d="M15,65 L-25,175 Q10,185 45,178 L55,90 Z" fill="#04090f" />
-      <path d="M-25,175 Q0,165 20,176 L15,105 Z" fill="#02060a" />
+    <!-- Ground Shadow -->
+    <ellipse cx="35" cy="192" rx="45" ry="9" fill="#000000" opacity="0.85" />
 
-      <!-- Legs in Forward Lunging Combat Stance -->
-      <!-- Left Leg (Forward) -->
-      <path d="M25,135 L45,182 L35,188 L60,188 L55,135 Z" fill="#03080e" />
-      <line x1="35" y1="188" x2="60" y2="188" stroke="#00f0ff" stroke-width="2" filter="url(#glow-cyan)" />
-      <!-- Right Leg (Back Stance) -->
-      <path d="M0,135 L-15,180 L-25,185 L-5,185 L5,135 Z" fill="#050d14" />
-      <line x1="-25" y1="185" x2="-5" y2="185" stroke="#00f0ff" stroke-width="2" filter="url(#glow-cyan)" />
+    <!-- Flowing Combat Trenchcoat / Cape -->
+    <path d="M15,65 L-25,175 Q10,185 45,178 L55,90 Z" fill="#04090f" />
+    <path d="M-25,175 Q0,165 20,176 L15,105 Z" fill="#02060a" />
 
-      <!-- Armored Torso, Tactical Exosuit & Shoulders -->
-      <path d="M10,45 L42,42 L50,85 L42,138 L12,138 L4,85 Z" fill="#06111a" />
-      <path d="M18,48 L36,46 L34,75 L20,75 Z" fill="#0a1a26" />
+    <!-- Legs in Forward Lunging Combat Stance -->
+    <!-- Left Leg (Forward) -->
+    <path d="M25,135 L45,182 L35,188 L60,188 L55,135 Z" fill="#03080e" />
+    <line x1="35" y1="188" x2="60" y2="188" stroke="#00f0ff" stroke-width="2" filter="url(#glow-cyan)" />
+    <!-- Right Leg (Back Stance) -->
+    <path d="M0,135 L-15,180 L-25,185 L-5,185 L5,135 Z" fill="#050d14" />
+    <line x1="-25" y1="185" x2="-5" y2="185" stroke="#00f0ff" stroke-width="2" filter="url(#glow-cyan)" />
 
-      <!-- Armored Shoulders -->
-      <polygon points="4,42 -10,58 6,65 14,46" fill="#091b26" />
-      <polygon points="42,40 58,55 46,65 34,44" fill="#091b26" />
+    <!-- Armored Torso, Tactical Exosuit & Shoulders -->
+    <path d="M10,45 L42,42 L50,85 L42,138 L12,138 L4,85 Z" fill="#06111a" />
+    <path d="M18,48 L36,46 L34,75 L20,75 Z" fill="#0a1a26" />
 
-      <!-- Helmet & Cyan Visor -->
-      <path d="M18,20 Q30,8 42,20 Q48,35 40,44 L16,44 Q10,35 18,20 Z" fill="#050e17" />
-      <path d="M22,24 Q32,18 42,23" stroke="#00f0ff" stroke-width="3" fill="none" filter="url(#glow-cyan)" />
-      <circle cx="42" cy="25" r="1.8" fill="#ffffff" filter="url(#glow-cyan)" />
+    <!-- Armored Shoulders -->
+    <polygon points="4,42 -10,58 6,65 14,46" fill="#091b26" />
+    <polygon points="42,40 58,55 46,65 34,44" fill="#091b26" />
 
-      <!-- Armored Glow Nodes -->
-      <circle cx="6" cy="52" r="1.8" fill="#00f0ff" filter="url(#glow-cyan)" />
-      <circle cx="48" cy="50" r="1.8" fill="#00f0ff" filter="url(#glow-cyan)" />
-      <circle cx="28" cy="62" r="1.8" fill="#00f0ff" filter="url(#glow-cyan)" />
-      <line x1="14" y1="105" x2="38" y2="105" stroke="#00f0ff" stroke-width="1.5" filter="url(#glow-cyan)" />
+    <!-- Helmet & Cyan Visor -->
+    <path d="M18,20 Q30,8 42,20 Q48,35 40,44 L16,44 Q10,35 18,20 Z" fill="#050e17" />
+    <path d="M22,24 Q32,18 42,23" stroke="#00f0ff" stroke-width="3" fill="none" filter="url(#glow-cyan)" />
+    <circle cx="42" cy="25" r="1.8" fill="#ffffff" filter="url(#glow-cyan)" />
 
-      <!-- Extended Right Arm Wielding Cyan Plasma Blade / Staff -->
-      <g class="anim-blade-left">
-        <path d="M42,55 L75,85 L95,95 L90,105 L65,95 Z" fill="#071520" />
-        <!-- Glowing Cyan Plasma Saber / Combat Staff (Facing Center Clash Point) -->
-        <!-- Hilt -->
-        <rect x="88" y="90" width="35" height="7" transform="rotate(-32, 88, 90)" fill="#11293a" stroke="#00f0ff" stroke-width="1" />
-        <!-- Plasma Blade Beam -->
-        <line x1="110" y1="78" x2="260" y2="-15" stroke="url(#cyan-blade-grad)" stroke-width="6" stroke-linecap="round" filter="url(#glow-intense)" />
-        <line x1="110" y1="78" x2="260" y2="-15" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" />
-      </g>
+    <!-- Armored Glow Nodes -->
+    <circle cx="6" cy="52" r="1.8" fill="#00f0ff" filter="url(#glow-cyan)" />
+    <circle cx="48" cy="50" r="1.8" fill="#00f0ff" filter="url(#glow-cyan)" />
+    <circle cx="28" cy="62" r="1.8" fill="#00f0ff" filter="url(#glow-cyan)" />
+    <line x1="14" y1="105" x2="38" y2="105" stroke="#00f0ff" stroke-width="1.5" filter="url(#glow-cyan)" />
+
+    <!-- Extended Right Arm & Cyan Plasma Blade with Dynamic Swing via SMIL -->
+    <g>
+      <animateTransform attributeName="transform" type="rotate" values="0 88 90; 10 88 90; -4 88 90; 0 88 90" dur="2s" repeatCount="indefinite" />
+      <path d="M42,55 L75,85 L95,95 L90,105 L65,95 Z" fill="#071520" />
+      <!-- Saber Hilt -->
+      <rect x="88" y="90" width="35" height="7" transform="rotate(-32, 88, 90)" fill="#11293a" stroke="#00f0ff" stroke-width="1" />
+      <!-- Glowing Cyan Plasma Blade Beam -->
+      <line x1="110" y1="78" x2="260" y2="-15" stroke="url(#cyan-blade-grad)" stroke-width="7" stroke-linecap="round" filter="url(#glow-intense)">
+        <animate attributeName="stroke-width" values="6; 9; 6" dur="1s" repeatCount="indefinite" />
+      </line>
+      <line x1="110" y1="78" x2="260" y2="-15" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" />
     </g>
   </g>
 
   <!-- [WARRIOR 2: RIGHT RIVAL WARRIOR - CRIMSON / MAGENTA PLASMA WEAPON] -->
-  <g class="anim-warrior-right">
-    <g transform="translate(730, 235)">
-      <!-- Ground Shadow -->
-      <ellipse cx="-15" cy="192" rx="45" ry="9" fill="#000000" opacity="0.85" />
+  <g transform="translate(730, 235)">
+    <!-- Dynamic Breathing & Combat Motion via SMIL -->
+    <animateTransform attributeName="transform" type="translate" values="730 235; 722 230; 732 237; 730 235" dur="3s" repeatCount="indefinite" />
 
-      <!-- Flowing Combat Cape (Billowing Backward to the right) -->
-      <path d="M5,65 L55,175 Q20,185 -15,178 L-25,90 Z" fill="#0f0409" />
-      <path d="M55,175 Q30,165 10,176 L15,105 Z" fill="#0a0206" />
+    <!-- Ground Shadow -->
+    <ellipse cx="-15" cy="192" rx="45" ry="9" fill="#000000" opacity="0.85" />
 
-      <!-- Legs in Aggressive Stance Facing Left -->
-      <!-- Right Leg (Forward Left) -->
-      <path d="M-5,135 L-25,182 L-15,188 L-40,188 L-35,135 Z" fill="#0e0308" />
-      <line x1="-40" y1="188" x2="-15" y2="188" stroke="#ff0055" stroke-width="2" filter="url(#glow-magenta)" />
-      <!-- Left Leg (Back Right) -->
-      <path d="M20,135 L35,180 L45,185 L25,185 L15,135 Z" fill="#14050d" />
-      <line x1="25" y1="185" x2="45" y2="185" stroke="#ff0055" stroke-width="2" filter="url(#glow-magenta)" />
+    <!-- Flowing Combat Cape -->
+    <path d="M5,65 L55,175 Q20,185 -15,178 L-25,90 Z" fill="#0f0409" />
+    <path d="M55,175 Q30,165 10,176 L15,105 Z" fill="#0a0206" />
 
-      <!-- Armored Torso, Crimson Exosuit & Shadow Plate -->
-      <path d="M10,45 L-22,42 L-30,85 L-22,138 L8,138 L16,85 Z" fill="#1a0611" />
-      <path d="M2,48 L-16,46 L-14,75 L0,75 Z" fill="#260a1a" />
+    <!-- Legs in Aggressive Stance Facing Left -->
+    <!-- Right Leg (Forward Left) -->
+    <path d="M-5,135 L-25,182 L-15,188 L-40,188 L-35,135 Z" fill="#0e0308" />
+    <line x1="-40" y1="188" x2="-15" y2="188" stroke="#ff0055" stroke-width="2" filter="url(#glow-magenta)" />
+    <!-- Left Leg (Back Right) -->
+    <path d="M20,135 L35,180 L45,185 L25,185 L15,135 Z" fill="#14050d" />
+    <line x1="25" y1="185" x2="45" y2="185" stroke="#ff0055" stroke-width="2" filter="url(#glow-magenta)" />
 
-      <!-- Armored Shoulders -->
-      <polygon points="16,42 30,58 14,65 6,46" fill="#26091b" />
-      <polygon points="-22,40 -38,55 -26,65 -14,44" fill="#26091b" />
+    <!-- Armored Torso, Crimson Exosuit & Shadow Plate -->
+    <path d="M10,45 L-22,42 L-30,85 L-22,138 L8,138 L16,85 Z" fill="#1a0611" />
+    <path d="M2,48 L-16,46 L-14,75 L0,75 Z" fill="#260a1a" />
 
-      <!-- Helmet & Crimson/Magenta Visor -->
-      <path d="M2,20 Q-10,8 -22,20 Q-28,35 -20,44 L4,44 Q10,35 2,20 Z" fill="#17050e" />
-      <path d="M-2,24 Q-12,18 -22,23" stroke="#ff0055" stroke-width="3" fill="none" filter="url(#glow-magenta)" />
-      <circle cx="-22" cy="25" r="1.8" fill="#ffffff" filter="url(#glow-magenta)" />
+    <!-- Armored Shoulders -->
+    <polygon points="16,42 30,58 14,65 6,46" fill="#26091b" />
+    <polygon points="-22,40 -38,55 -26,65 -14,44" fill="#26091b" />
 
-      <!-- Armored Glow Nodes (Hot Pink/Crimson) -->
-      <circle cx="14" cy="52" r="1.8" fill="#ff0055" filter="url(#glow-magenta)" />
-      <circle cx="-28" cy="50" r="1.8" fill="#ff0055" filter="url(#glow-magenta)" />
-      <circle cx="-8" cy="62" r="1.8" fill="#ff0055" filter="url(#glow-magenta)" />
-      <line x1="6" y1="105" x2="-18" y2="105" stroke="#ff0055" stroke-width="1.5" filter="url(#glow-magenta)" />
+    <!-- Helmet & Crimson/Magenta Visor -->
+    <path d="M2,20 Q-10,8 -22,20 Q-28,35 -20,44 L4,44 Q10,35 2,20 Z" fill="#17050e" />
+    <path d="M-2,24 Q-12,18 -22,23" stroke="#ff0055" stroke-width="3" fill="none" filter="url(#glow-magenta)" />
+    <circle cx="-22" cy="25" r="1.8" fill="#ffffff" filter="url(#glow-magenta)" />
 
-      <!-- Extended Left Arm Wielding Crimson Plasma Blade -->
-      <g class="anim-blade-right">
-        <path d="M-22,55 L-55,85 L-75,95 L-70,105 L-45,95 Z" fill="#200715" />
-        <!-- Glowing Crimson/Magenta Plasma Saber (Crossing at Center Clash Point) -->
-        <!-- Hilt -->
-        <rect x="-95" y="85" width="35" height="7" transform="rotate(32, -95, 85)" fill="#3a1129" stroke="#ff0055" stroke-width="1" />
-        <!-- Plasma Blade Beam -->
-        <line x1="-90" y1="78" x2="-240" y2="-15" stroke="url(#magenta-blade-grad)" stroke-width="6" stroke-linecap="round" filter="url(#glow-intense)" />
-        <line x1="-90" y1="78" x2="-240" y2="-15" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" />
-      </g>
+    <!-- Armored Glow Nodes -->
+    <circle cx="14" cy="52" r="1.8" fill="#ff0055" filter="url(#glow-magenta)" />
+    <circle cx="-28" cy="50" r="1.8" fill="#ff0055" filter="url(#glow-magenta)" />
+    <circle cx="-8" cy="62" r="1.8" fill="#ff0055" filter="url(#glow-magenta)" />
+    <line x1="6" y1="105" x2="-18" y2="105" stroke="#ff0055" stroke-width="1.5" filter="url(#glow-magenta)" />
+
+    <!-- Extended Left Arm & Crimson Plasma Blade with Dynamic Swing via SMIL -->
+    <g>
+      <animateTransform attributeName="transform" type="rotate" values="0 -95 85; -10 -95 85; 4 -95 85; 0 -95 85" dur="2s" repeatCount="indefinite" />
+      <path d="M-22,55 L-55,85 L-75,95 L-70,105 L-45,95 Z" fill="#200715" />
+      <!-- Saber Hilt -->
+      <rect x="-95" y="85" width="35" height="7" transform="rotate(32, -95, 85)" fill="#3a1129" stroke="#ff0055" stroke-width="1" />
+      <!-- Glowing Crimson Plasma Blade Beam -->
+      <line x1="-90" y1="78" x2="-240" y2="-15" stroke="url(#magenta-blade-grad)" stroke-width="7" stroke-linecap="round" filter="url(#glow-intense)">
+        <animate attributeName="stroke-width" values="6; 9; 6" dur="1s" repeatCount="indefinite" />
+      </line>
+      <line x1="-90" y1="78" x2="-240" y2="-15" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" />
     </g>
   </g>
 
-  <!-- [CENTRAL PLASMA ENERGY CLASH & ELECTRIC SPARK BURST] -->
+  <!-- [CENTRAL PLASMA ENERGY CLASH & ELECTRIC SPARK BURST with SMIL] -->
   <g transform="translate(500, 315)">
     <!-- Shockwave Energy Glow Burst -->
-    <ellipse cx="0" cy="0" rx="60" ry="60" fill="url(#clash-burst)" class="anim-clash" filter="url(#clash-bloom)" />
+    <ellipse cx="0" cy="0" rx="60" ry="60" fill="url(#clash-burst)" filter="url(#clash-bloom)">
+      <animate attributeName="rx" values="45; 75; 50; 70; 45" dur="1.6s" repeatCount="indefinite" />
+      <animate attributeName="ry" values="45; 75; 50; 70; 45" dur="1.6s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.6; 1; 0.7; 0.95; 0.6" dur="1.6s" repeatCount="indefinite" />
+    </ellipse>
     
     <!-- Electric Lightning / Arc Sparks -->
-    <path d="M-30,-20 L-10,0 L-25,15 L5,-5 L-5,-25 L20,0 L0,30" stroke="#ffffff" stroke-width="2" fill="none" filter="url(#glow-cyan)" />
-    <path d="M15,-25 L0,-5 L25,10 L-5,5 L10,30" stroke="#00f0ff" stroke-width="1.8" fill="none" filter="url(#glow-cyan)" />
-    <path d="M-15,-30 L5,-10 L-20,10 L15,25" stroke="#ff007f" stroke-width="1.8" fill="none" filter="url(#glow-magenta)" />
+    <path d="M-30,-20 L-10,0 L-25,15 L5,-5 L-5,-25 L20,0 L0,30" stroke="#ffffff" stroke-width="2" fill="none" filter="url(#glow-cyan)">
+      <animate attributeName="opacity" values="1; 0.2; 1; 0.8; 1" dur="0.4s" repeatCount="indefinite" />
+    </path>
+    <path d="M15,-25 L0,-5 L25,10 L-5,5 L10,30" stroke="#00f0ff" stroke-width="1.8" fill="none" filter="url(#glow-cyan)">
+      <animate attributeName="opacity" values="0.3; 1; 0.4; 1; 0.3" dur="0.5s" repeatCount="indefinite" />
+    </path>
+    <path d="M-15,-30 L5,-10 L-20,10 L15,25" stroke="#ff007f" stroke-width="1.8" fill="none" filter="url(#glow-magenta)">
+      <animate attributeName="opacity" values="0.8; 0.2; 1; 0.3; 0.8" dur="0.35s" repeatCount="indefinite" />
+    </path>
 
-    <!-- Radiating Flying Sparks -->
-    <circle cx="0" cy="0" r="3" fill="#ffffff" class="anim-spark1" filter="url(#glow-cyan)" />
-    <circle cx="0" cy="0" r="2.5" fill="#00f0ff" class="anim-spark2" filter="url(#glow-cyan)" />
-    <circle cx="0" cy="0" r="3" fill="#ff007f" class="anim-spark3" filter="url(#glow-magenta)" />
-    <circle cx="0" cy="0" r="4" fill="#ffffff" filter="url(#glow-intense)" />
+    <!-- Radiating Flying Sparks via SMIL -->
+    <circle cx="0" cy="0" r="3" fill="#ffffff" filter="url(#glow-cyan)">
+      <animate attributeName="cx" values="0; -60; 0" dur="1.2s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="0; -45; 0" dur="1.2s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="1; 0; 1" dur="1.2s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="0" cy="0" r="2.5" fill="#00f0ff" filter="url(#glow-cyan)">
+      <animate attributeName="cx" values="0; 65; 0" dur="1.4s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="0; -50; 0" dur="1.4s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="1; 0; 1" dur="1.4s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="0" cy="0" r="3" fill="#ff007f" filter="url(#glow-magenta)">
+      <animate attributeName="cx" values="0; -25; 0" dur="1.1s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="0; -70; 0" dur="1.1s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="1; 0; 1" dur="1.1s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="0" cy="0" r="4.5" fill="#ffffff" filter="url(#glow-intense)">
+      <animate attributeName="r" values="3.5; 6; 3.5" dur="0.8s" repeatCount="indefinite" />
+    </circle>
   </g>
 
   <!-- 7. HERO NEO-FUTURISTIC TITLE: "ROSHAN" & "LONE WARRIOR" -->
-  <g transform="translate(500, 68)" class="anim-pulse">
+  <g transform="translate(500, 68)">
     <!-- Tech Frame Brackets / HUD elements -->
     <g opacity="0.85">
       <!-- Left Bracket -->
@@ -450,8 +414,11 @@
       <text x="315" y="-36" text-anchor="end" class="font-mono" font-size="8" fill="#ff007f" letter-spacing="2">DUEL.LEVEL//TITAN</text>
     </g>
 
-    <!-- Deep Ambient Cyber Neon Glow Behind Title -->
-    <text x="0" y="28" text-anchor="middle" class="font-orbitron" font-weight="900" font-size="64" letter-spacing="14" stroke="rgba(0, 240, 255, 0.9)" stroke-width="10" stroke-linejoin="round" fill="none" filter="url(#glow-intense)">ROSHAN</text>
+    <!-- Ambient Neon Aura Behind Title -->
+    <text x="0" y="28" text-anchor="middle" class="font-orbitron" font-weight="900" font-size="64" letter-spacing="14" stroke="rgba(0, 240, 255, 0.9)" stroke-width="10" stroke-linejoin="round" fill="none" filter="url(#glow-intense)">
+      ROSHAN
+      <animate attributeName="stroke-width" values="8; 14; 8" dur="3s" repeatCount="indefinite" />
+    </text>
     <text x="0" y="28" text-anchor="middle" class="font-orbitron" font-weight="900" font-size="64" letter-spacing="14" stroke="rgba(255, 0, 127, 0.85)" stroke-width="5" stroke-linejoin="round" fill="none" filter="url(#glow-magenta)">ROSHAN</text>
     
     <!-- Crisp Outer Gradient Stroke -->
@@ -488,9 +455,13 @@
     </g>
   </g>
 
-  <!-- 8. SCANLINE / LASER OVERLAY EFFECT -->
-  <g opacity="0.3" pointer-events="none">
-    <line x1="0" y1="0" x2="1000" y2="0" stroke="#00f0ff" stroke-width="2" class="anim-scan" filter="url(#glow-cyan)" />
+  <!-- 8. SCANLINE / LASER OVERLAY EFFECT with SMIL Animation -->
+  <g opacity="0.4" pointer-events="none">
+    <line x1="0" y1="0" x2="1000" y2="0" stroke="#00f0ff" stroke-width="2.5" filter="url(#glow-cyan)">
+      <animate attributeName="y1" values="-20; 460; -20" dur="6s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="-20; 460; -20" dur="6s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0; 0.9; 0.9; 0" dur="6s" repeatCount="indefinite" />
+    </line>
   </g>
 
   <!-- Border Frame -->

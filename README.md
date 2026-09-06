@@ -1,19 +1,30 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=ff0055,ff7700,ffdd00,00ff88,00f0ff,3b82f6,a855f7,ff0055&height=240&section=header&text=⚡%20ROSHAN%20⚡&fontSize=58&fontAlignY=36&animation=twinkling&fontColor=ffffff&desc=Engineering%20Student%20%E2%80%A2%20Full-Stack%20Web%20Developer&descSize=21&descAlignY=60&descColor=ffffff&stroke=00f0ff&strokeWidth=2" width="100%" alt="Roshan Rainbow Banner" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=ff0055,ff7700,ffdd00,00ff88,00f0ff,3b82f6,a855f7,ff0055&height=250&section=header&text=⚡%20ROSHAN%20⚡&fontSize=60&fontAlignY=36&animation=twinkling&fontColor=ffffff&desc=✨%20Engineering%20Student%20•%20Full-Stack%20Web%20Developer%20✨&descSize=21&descAlignY=60&descColor=ffffff&stroke=00f0ff&strokeWidth=2" width="100%" alt="⚡ ROSHAN ⚡ Animated Rainbow Hero Banner" />
 </p>
 
 <p align="center">
   <a href="https://github.com/roshanr14">
-    <img src="https://readme-typing-svg.herokuapp.com?font=Space+Grotesk&weight=800&size=26&duration=2400&pause=900&color=00F0FF&center=true&vCenter=true&multiline=true&width=750&height=110&lines=👋+HI+THERE%2C+I'M+ROSHAN!;⚡+ENGINEERING+STUDENT+%26+BUILDER;💻+FULL-STACK+WEB+DEVELOPER;🚀+EXPERIENCE+THE+INTERACTIVE+3D+PORTFOLIO" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&weight=900&size=26&duration=2400&pause=900&color=00F0FF&center=true&vCenter=true&multiline=true&width=750&height=110&lines=👋+HI+THERE%2C+I'M+ROSHAN!;⚡+ENGINEERING+STUDENT+%26+FULL-STACK+DEV;💻+BUILDING+NEXT-GEN+WEB+ARCHITECTURES;🚀+PASSIONATE+ABOUT+DSA+%26+SYSTEM+DESIGN" alt="Orbitron Rainbow Typing SVG" />
   </a>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Identity-Roshan-00f0ff?style=for-the-badge&logo=codeforces&logoColor=black" alt="Identity Badge"/>
-  <img src="https://img.shields.io/badge/Status-Undergraduate%20Engineering%20Student-a855f7?style=for-the-badge&logo=google-scholar&logoColor=white" alt="Status Badge"/>
-  <img src="https://img.shields.io/badge/Focus-Full--Stack%20Web%20Dev-38bdf8?style=for-the-badge&logo=react&logoColor=black" alt="Focus Badge"/>
-  <img src="https://img.shields.io/badge/Open%20To-Internships%20%26%20Collabs-10b981?style=for-the-badge&logo=github&logoColor=white" alt="Open To Badge"/>
+  <a href="#-profile_data">
+    <img src="https://img.shields.io/badge/View_Portfolio-ff0055?style=for-the-badge&logo=rocket&logoColor=white" alt="View Portfolio CTA" />
+  </a>
+  &nbsp;
+  <a href="mailto:roshan.dev@example.com">
+    <img src="https://img.shields.io/badge/Get_In_Touch-00f0ff?style=for-the-badge&logo=telegram&logoColor=black" alt="Get In Touch CTA" />
+  </a>
 </p>
+
+<div align="center">
+
+| 🚀 **PROJECTS** | 🤝 **HAPPY CLIENTS** | ⚡ **EXPERIENCE** |
+| :---: | :---: | :---: |
+| <img src="https://img.shields.io/badge/100+-ff0055?style=for-the-badge&logo=github&logoColor=white" /><br><b>Completed Missions</b> | <img src="https://img.shields.io/badge/50+-00ff88?style=for-the-badge&logo=checkmarx&logoColor=black" /><br><b>Global Collaborations</b> | <img src="https://img.shields.io/badge/3+_Years-3b82f6?style=for-the-badge&logo=clockify&logoColor=white" /><br><b>Coding Experience</b> |
+
+</div>
 
 ---
 
@@ -31,7 +42,7 @@
 | ⚙️ **Backend & APIs** | **`Node.js`** • **`Express.js`** • **`RESTful APIs`** |
 | 🗄️ **Databases** | **`MongoDB`** • **`PostgreSQL`** • **`MySQL`** |
 | 🧰 **Engineering Tools** | **`Git`** • **`GitHub`** • **`Docker Basics`** • **`Linux / Bash`** • **`VS Code`** • **`Postman`** |
-| 🎯 **Current Focus** | **`Eager to learn new`** |
+| 🎯 **Current Focus** | **`Eager to learn new technologies & master DSA`** |
 | ☕ **Fun Fact** | **`"I turn caffeine and curiosity into clean, functional code ☕🚀"`** |
 
 </div>
@@ -112,6 +123,7 @@
 ---
 
 <p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=ff0055,ff7700,ffdd00,00ff88,00f0ff,3b82f6,a855f7,ff0055&height=120&section=footer" width="100%" alt="Footer Banner" /><br>
   <i>💡 "Engineering is the art of turning mathematical logic into impactful reality."</i><br>
-  <b>Crafted with ❤️ by Roshan</b>
+  <b>⚡ Crafted with ❤️ by Roshan ⚡</b>
 </p>

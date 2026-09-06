@@ -1,153 +1,66 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 240" width="100%" height="240" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 120" width="100%" height="120" fill="none">
   <defs>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;800;900&amp;family=Rajdhani:wght@600;700&amp;family=JetBrains+Mono:wght@500;700&amp;display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@800;900&amp;display=swap');
 
       .nf-title {
-        font-family: 'Orbitron', 'Space Grotesk', -apple-system, sans-serif;
+        font-family: 'Orbitron', -apple-system, sans-serif;
         font-weight: 900;
-        font-size: 68px;
-        letter-spacing: 0.18em;
+        font-size: 78px;
+        letter-spacing: 0.22em;
         text-transform: uppercase;
-      }
-      .nf-sub {
-        font-family: 'Rajdhani', 'Orbitron', sans-serif;
-        font-weight: 700;
-        font-size: 15px;
-        letter-spacing: 0.25em;
-        fill: #00F0FF;
-        text-transform: uppercase;
-      }
-      .nf-mono {
-        font-family: 'JetBrains Mono', monospace;
-        font-weight: 700;
-        font-size: 11px;
-        letter-spacing: 0.12em;
-        fill: #94A3B8;
       }
       .nf-glow-cyan {
-        filter: drop-shadow(0 0 12px rgba(0, 240, 255, 0.75)) drop-shadow(0 0 25px rgba(0, 240, 255, 0.35));
+        filter: drop-shadow(0 0 16px rgba(0, 240, 255, 0.8)) drop-shadow(0 0 35px rgba(0, 240, 255, 0.45));
       }
       .nf-glow-purple {
-        filter: drop-shadow(0 0 12px rgba(168, 85, 247, 0.8)) drop-shadow(0 0 30px rgba(168, 85, 247, 0.4));
+        filter: drop-shadow(0 0 16px rgba(168, 85, 247, 0.85)) drop-shadow(0 0 40px rgba(168, 85, 247, 0.5));
       }
-      .pulse-slow {
-        animation: pulseGlow 4s ease-in-out infinite alternate;
+      .nf-pulse {
+        animation: neonPulse 3s ease-in-out infinite alternate;
       }
-      @keyframes pulseGlow {
-        0% { opacity: 0.7; }
-        100% { opacity: 1; }
+      @keyframes neonPulse {
+        0% {
+          filter: drop-shadow(0 0 12px rgba(0, 240, 255, 0.7)) drop-shadow(0 0 25px rgba(168, 85, 247, 0.5));
+        }
+        50% {
+          filter: drop-shadow(0 0 22px rgba(192, 132, 252, 0.9)) drop-shadow(0 0 50px rgba(0, 240, 255, 0.7));
+        }
+        100% {
+          filter: drop-shadow(0 0 12px rgba(0, 240, 255, 0.7)) drop-shadow(0 0 25px rgba(168, 85, 247, 0.5));
+        }
       }
     </style>
 
-    <!-- Gradients -->
-    <linearGradient id="nf-bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#070B18" stop-opacity="0.95" />
-      <stop offset="50%" stop-color="#0F172A" stop-opacity="0.9" />
-      <stop offset="100%" stop-color="#050814" stop-opacity="0.98" />
-    </linearGradient>
-
-    <linearGradient id="nf-border-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00F0FF" />
-      <stop offset="30%" stop-color="#3B82F6" />
-      <stop offset="70%" stop-color="#A855F7" />
-      <stop offset="100%" stop-color="#EC4899" />
-    </linearGradient>
-
+    <!-- Holographic Chrome Gradient -->
     <linearGradient id="nf-text-grad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#FFFFFF" />
-      <stop offset="25%" stop-color="#E0F2FE" />
-      <stop offset="50%" stop-color="#00F0FF" />
-      <stop offset="80%" stop-color="#C084FC" />
+      <stop offset="20%" stop-color="#E0F2FE" />
+      <stop offset="45%" stop-color="#00F0FF" />
+      <stop offset="75%" stop-color="#C084FC" />
       <stop offset="100%" stop-color="#F472B6" />
     </linearGradient>
 
-    <linearGradient id="nf-glass-highlight" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.12" />
-      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.02" />
-      <stop offset="100%" stop-color="#000000" stop-opacity="0.3" />
+    <!-- Outer Neon Stroke Gradient -->
+    <linearGradient id="nf-stroke-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00F0FF" />
+      <stop offset="50%" stop-color="#A855F7" />
+      <stop offset="100%" stop-color="#EC4899" />
     </linearGradient>
-
-    <!-- Grid Pattern -->
-    <pattern id="nf-grid" width="24" height="24" patternUnits="userSpaceOnUse">
-      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="rgba(0, 240, 255, 0.06)" stroke-width="1" />
-    </pattern>
   </defs>
 
-  <!-- Outer Ambient Glow -->
-  <rect x="15" y="15" width="820" height="210" rx="16" fill="url(#nf-border-grad)" opacity="0.25" class="nf-glow-purple pulse-slow" />
-
-  <!-- Main Angled HUD Shell -->
-  <g transform="translate(10, 10)">
-    <!-- Main Background -->
-    <path d="M 24 0 L 806 0 L 830 24 L 830 196 L 806 220 L 24 220 L 0 196 L 0 24 Z" fill="url(#nf-bg-grad)" stroke="url(#nf-border-grad)" stroke-width="1.8" />
-
-    <!-- Grid Texture -->
-    <path d="M 24 0 L 806 0 L 830 24 L 830 196 L 806 220 L 24 220 L 0 196 L 0 24 Z" fill="url(#nf-grid)" />
-
-    <!-- Frosted Glass Gradient Overlay -->
-    <path d="M 24 0 L 806 0 L 830 24 L 830 110 L 0 110 L 0 24 Z" fill="url(#nf-glass-highlight)" />
-
-    <!-- Top Telemetry Header Bar -->
-    <g transform="translate(30, 20)">
-      <!-- System Tag -->
-      <rect x="0" y="0" width="130" height="22" rx="4" fill="rgba(0, 240, 255, 0.12)" stroke="rgba(0, 240, 255, 0.4)" stroke-width="1" />
-      <circle cx="12" cy="11" r="3.5" fill="#00FF88" class="nf-glow-cyan" />
-      <text x="22" y="15" class="nf-mono" fill="#00F0FF">SYS // ONLINE</text>
-
-      <!-- Center Telemetry Data -->
-      <text x="385" y="15" class="nf-mono" text-anchor="middle" fill="#64748B">ID: 0x7F_ROSHAN • PROTOCOL: NEO_FUTURISM • VER 4.09</text>
-
-      <!-- Right Quantum Status -->
-      <g transform="translate(640, 0)">
-        <rect x="0" y="0" width="130" height="22" rx="4" fill="rgba(168, 85, 247, 0.12)" stroke="rgba(168, 85, 247, 0.4)" stroke-width="1" />
-        <circle cx="12" cy="11" r="3.5" fill="#A855F7" class="nf-glow-purple" />
-        <text x="22" y="15" class="nf-mono" fill="#C084FC">CORE // ACTIVE</text>
-      </g>
-    </g>
-
-    <!-- Sleek Neon Corner Reticles (Top-Left, Top-Right, Bottom-Left, Bottom-Right) -->
-    <path d="M 12 36 L 12 16 L 36 16" fill="none" stroke="#00F0FF" stroke-width="2.5" class="nf-glow-cyan" />
-    <path d="M 818 36 L 818 16 L 794 16" fill="none" stroke="#A855F7" stroke-width="2.5" class="nf-glow-purple" />
-    <path d="M 12 184 L 12 204 L 36 204" fill="none" stroke="#A855F7" stroke-width="2.5" class="nf-glow-purple" />
-    <path d="M 818 184 L 818 204 L 794 204" fill="none" stroke="#00F0FF" stroke-width="2.5" class="nf-glow-cyan" />
-
-    <!-- Center Hero Typography: ROSHAN -->
-    <g transform="translate(415, 122)">
-      <!-- Underglow Stroke -->
-      <text x="0" y="0" text-anchor="middle" class="nf-title nf-glow-cyan" stroke="rgba(0, 240, 255, 0.6)" stroke-width="6" fill="none">ROSHAN</text>
-      <text x="0" y="0" text-anchor="middle" class="nf-title nf-glow-purple" stroke="rgba(168, 85, 247, 0.5)" stroke-width="3" fill="none">ROSHAN</text>
-      <!-- Main Metallic Gradient Fill -->
-      <text x="0" y="0" text-anchor="middle" class="nf-title" fill="url(#nf-text-grad)">ROSHAN</text>
-    </g>
-
-    <!-- Subtitle Banner Strip with Laser Lines -->
-    <g transform="translate(0, 160)">
-      <!-- Left Laser Line -->
-      <line x1="60" y1="0" x2="240" y2="0" stroke="url(#nf-border-grad)" stroke-width="1.5" />
-      <circle cx="240" cy="0" r="2.5" fill="#00F0FF" />
-
-      <!-- Subtitle Text -->
-      <text x="415" y="5" text-anchor="middle" class="nf-sub">ENGINEERING UNDERGRAD // FULL-STACK ARCHITECT</text>
-
-      <!-- Right Laser Line -->
-      <circle cx="590" cy="0" r="2.5" fill="#A855F7" />
-      <line x1="590" y1="0" x2="770" y2="0" stroke="url(#nf-border-grad)" stroke-width="1.5" />
-    </g>
-
-    <!-- Bottom Futuristic Telemetry Badges -->
-    <g transform="translate(185, 184)">
-      <!-- Pill 1 -->
-      <rect x="0" y="0" width="135" height="20" rx="3" fill="rgba(0, 240, 255, 0.08)" stroke="rgba(0, 240, 255, 0.3)" stroke-width="1" />
-      <text x="67" y="14" text-anchor="middle" class="nf-mono" fill="#00F0FF">◆ WEB3 &amp; NEXT-GEN</text>
-
-      <!-- Pill 2 -->
-      <rect x="155" y="0" width="150" height="20" rx="3" fill="rgba(168, 85, 247, 0.08)" stroke="rgba(168, 85, 247, 0.3)" stroke-width="1" />
-      <text x="230" y="14" text-anchor="middle" class="nf-mono" fill="#C084FC">◆ HIGH-SCALE ARCH</text>
-
-      <!-- Pill 3 -->
-      <rect x="325" y="0" width="135" height="20" rx="3" fill="rgba(244, 114, 182, 0.08)" stroke="rgba(244, 114, 182, 0.3)" stroke-width="1" />
-      <text x="392" y="14" text-anchor="middle" class="nf-mono" fill="#F472B6">◆ ALGORITHMS &amp; AI</text>
-    </g>
+  <!-- Pure Neo-Futurism ROSHAN Typography -->
+  <g transform="translate(400, 88)" class="nf-pulse">
+    <!-- Deep Neon Ambient Glow Layer -->
+    <text x="0" y="0" text-anchor="middle" class="nf-title nf-glow-cyan" stroke="rgba(0, 240, 255, 0.7)" stroke-width="8" stroke-linejoin="round" fill="none">ROSHAN</text>
+    
+    <!-- Cyber Purple Secondary Glow Layer -->
+    <text x="0" y="0" text-anchor="middle" class="nf-title nf-glow-purple" stroke="rgba(168, 85, 247, 0.8)" stroke-width="4" stroke-linejoin="round" fill="none">ROSHAN</text>
+    
+    <!-- Sharp Futuristic Outline -->
+    <text x="0" y="0" text-anchor="middle" class="nf-title" stroke="url(#nf-stroke-grad)" stroke-width="2" stroke-linejoin="round" fill="none">ROSHAN</text>
+    
+    <!-- Main Metallic Holographic Fill -->
+    <text x="0" y="0" text-anchor="middle" class="nf-title" fill="url(#nf-text-grad)">ROSHAN</text>
   </g>
 </svg>

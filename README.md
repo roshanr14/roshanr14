@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="https://github.com/roshanr14">
-    <img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&weight=900&size=26&duration=2400&pause=900&color=C084FC&center=true&vCenter=true&multiline=true&width=750&height=110&lines=👋+HI+THERE%2C+I'M+ROSHAN!;⚡+ENGINEERING+STUDENT+%26+FULL-STACK+DEV;💻+BUILDING+NEXT-GEN+WEB+ARCHITECTURES;🚀+PASSIONATE+ABOUT+DSA+%26+SYSTEM+DESIGN" alt="Orbitron Glowing Purple Typing SVG" />
+    <img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&weight=900&size=26&duration=2400&pause=900&color=C084FC&center=true&vCenter=true&multiline=true&width=750&height=110&lines=👋+HI+THERE%2C+I'M+ROSHAN!;⚡+ENGINEERING+STUDENT+%26+FULL-STACK+DEV;" alt="Orbitron Glowing Purple Typing SVG" />
   </a>
 </p>
 

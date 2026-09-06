@@ -89,10 +89,10 @@
 
 <p align="center">
   <a href="https://github.com/roshanr14">
-    <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=roshanr14&theme=tokyonight" alt="Roshan's GitHub Stats" width="48%" />
+    <img src="profile-summary-card-output/tokyonight/3-stats.svg" alt="Roshan's GitHub Stats" width="48%" />
   </a>
   <a href="https://github.com/roshanr14">
-    <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=roshanr14&theme=tokyonight" alt="Top Languages" width="48%" />
+    <img src="profile-summary-card-output/tokyonight/1-repos-per-language.svg" alt="Top Languages" width="48%" />
   </a>
 </p>
 
@@ -106,10 +106,10 @@
 
 <p align="center">
   <a href="https://github.com/roshanr14">
-    <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=roshanr14&theme=tokyonight" alt="Roshan's Profile Activity Details" width="48%" />
+    <img src="profile-summary-card-output/tokyonight/0-profile-details.svg" alt="Roshan's Profile Activity Details" width="48%" />
   </a>
   <a href="https://github.com/roshanr14">
-    <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=roshanr14&theme=tokyonight" alt="Roshan's Productive Time Analysis" width="48%" />
+    <img src="profile-summary-card-output/tokyonight/4-productive-time.svg" alt="Roshan's Productive Time Analysis" width="48%" />
   </a>
 </p>
 

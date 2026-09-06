@@ -97,17 +97,6 @@
 
 ---
 
-### 🚀 Featured Missions & Projects
-
-| Project Name | Description | Tech Stack |
-| :--- | :--- | :--- |
-| **[CyberDeck](https://github.com/roshanr14)** | All-in-one developer productivity workspace & dashboard | `React` `Node.js` `MongoDB` `WebSockets` |
-| **[NexusFlow](https://github.com/roshanr14)** | Node-based visual AI workflow & prompt orchestration tool | `TypeScript` `Next.js` `Tailwind` `OpenAI` |
-| **[HyperGrid UI](https://github.com/roshanr14)** | Accessible cyberpunk theme component toolkit | `Vanilla JS` `CSS3` `Web Components` |
-| **[AlgoVisualizer](https://github.com/roshanr14)** | Step-by-step interactive Data Structures & Algorithm engine | `JavaScript` `HTML5 Canvas` `DSA` |
-
----
-
 ### 📡 Transmit & Connect
 
 <p align="center">

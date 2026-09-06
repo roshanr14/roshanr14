@@ -111,32 +111,6 @@
   </a>
 </p>
 
-#### ⚡ **`ANALYTICS_ARSENAL & REPOSITORY_METRICS`**
-
-<p align="center">
-  <a href="https://github.com/roshanr14">
-    <img src="profile-summary-card-output/tokyonight/3-stats.svg" alt="Roshan's GitHub Stats" width="48%" />
-  </a>
-  <a href="https://github.com/roshanr14">
-    <img src="profile-summary-card-output/tokyonight/1-repos-per-language.svg" alt="Top Languages" width="48%" />
-  </a>
-</p>
-
-<p align="center">
-  <a href="https://github.com/roshanr14">
-    <img src="profile-summary-card-output/tokyonight/0-profile-details.svg" alt="Roshan's Profile Activity Details" width="48%" />
-  </a>
-  <a href="https://github.com/roshanr14">
-    <img src="profile-summary-card-output/tokyonight/4-productive-time.svg" alt="Roshan's Productive Time Analysis" width="48%" />
-  </a>
-</p>
-
-<p align="center">
-  <a href="https://github.com/roshanr14">
-    <img src="https://streak-stats.demolab.com/?user=roshanr14&theme=tokyonight&border=00f0ff&background=060913&ring=00f0ff&fire=a855f7&currStreakLabel=00f0ff&stroke=00f0ff&sideLabels=f8fafc&cache_seconds=1800" alt="GitHub Streak" width="95%" />
-  </a>
-</p>
-
 ---
 
 ### 🚀 Featured Missions & Projects

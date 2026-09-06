@@ -79,8 +79,6 @@
 
 ---
 
-### 📊 **`CYBER_MATRIX // GITHUB_CONTRIBUTIONS & ACTIVITY`**
-
 <div align="center">
 
 <a href="https://github.com/roshanr14">

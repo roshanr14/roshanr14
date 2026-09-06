@@ -23,7 +23,7 @@
 
 | 🏷️ **ATTRIBUTE** | 💎 **SPECIFICATION & DETAILS** |
 | :--- | :--- |
-| 👤 **Name & Identity** | **`Roshan`** *(Pronouns: **`He / Him`**)* |
+| 👤 **Name & Identity** | **`Roshan`** |
 | 🎓 **Academic Degree** | **`Bachelor of Technology (B.Tech)`** — **`Engineering Undergraduate`** |
 | 💼 **Core Domain** | **`Engineering Student`** & **`Full-Stack Web Developer`** |
 | 💻 **Core Languages** | **`JavaScript (ES6+)`** • **`TypeScript`** • **`Python`** • **`C++`** • **`HTML5`** • **`CSS3`** |

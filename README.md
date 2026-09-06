@@ -79,22 +79,6 @@
 
 ---
 
-<div align="center">
-
-<a href="https://github.com/roshanr14">
-  <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fgithub-contributions-api.jogruber.de%2Fv4%2Froshanr14&query=%24.total%5B'2026'%5D&suffix=%20Contributions&label=⚡%202026%20TOTAL%20CONTRIBUTIONS&color=00f0ff&style=for-the-badge&logo=github&logoColor=black" alt="Total GitHub Contributions" />
-</a>
-<a href="https://github.com/roshanr14">
-  <img src="https://img.shields.io/badge/Current%20Status-Active%20Builder-a855f7?style=for-the-badge&logo=git&logoColor=white" alt="Active Builder" />
-</a>
-<a href="https://github.com/roshanr14">
-  <img src="https://img.shields.io/badge/Dev%20Focus-Full--Stack%20%26%20DSA-ff0055?style=for-the-badge&logo=codeforces&logoColor=white" alt="Dev Focus" />
-</a>
-
-</div>
-
-<br>
-
 #### 🏙️ **`3D_ISOMETRIC_CONTRIBUTION_CITY`**
 
 <p align="center">

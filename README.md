@@ -1,10 +1,6 @@
 <p align="center">
   <a href="https://github.com/roshanr14">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/roshanr14/roshanr14/main/assets/roshan-warrior-duel.svg?v=2">
-      <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/roshanr14/roshanr14/main/assets/roshan-warrior-duel.svg?v=2">
-      <img src="https://raw.githubusercontent.com/roshanr14/roshanr14/main/assets/roshan-warrior-duel.svg?v=2" width="100%" alt="⚡ ROSHAN ⚡ Neo-Futurism Lone Warrior" />
-    </picture>
+    <img src="https://raw.githubusercontent.com/roshanr14/roshanr14/main/assets/roshan-warrior-duel.svg?cache_bust=20260907_v1" width="100%" alt="⚡ ROSHAN ⚡ Lone Warrior Duel Banner" />
   </a>
 </p>
 

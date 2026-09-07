@@ -69,7 +69,10 @@
 
 <p align="center">
   <a href="https://github.com/roshanr14">
-    <img src="https://raw.githubusercontent.com/roshanr14/roshanr14/main/assets/footer-neofuturism.svg?v=vibecoder_20260907_v2" width="100%" alt="⚡ VIBECODER ⚡ Neo-Futurism Footer Banner" />
+    <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=020617,041e3a,00f0ff,7e22ce,ff007f,041e3a,020617&height=160&section=footer&text=⚡%20VIBECODER%20⚡&fontSize=28&fontColor=ffffff&fontAlignY=55&desc=⚔️%20CRAFTED%20WITH%20PASSION%20BY%20ROSHAN%20⚔️&descAlignY=80&descSize=13&descColor=00f0ff" width="100%" alt="⚡ VIBECODER ⚡ Footer Banner" />
   </a>
+  <br>
+  <b><code>⚡ "WHERE RHYTHM, LOGIC &amp; CODE CONVERGE" ⚡</code></b><br>
+  <sub><b>⚔️ PUSHING LIMITS • EVOLVING CODE • FORGING THE FUTURE ⚔️</b></sub>
 </p>
 

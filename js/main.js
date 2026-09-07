@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initContactForm();
   initCopyReadme();
   initCurrentYear();
+  initCyberDuelEngine();
 });
 
 /* ==========================================================================
@@ -746,3 +747,395 @@ function initCurrentYear() {
     yearEl.textContent = new Date().getFullYear();
   }
 }
+
+/* ==========================================================================
+   12. 3D CYBER WARRIOR DUEL ENGINE (CINEMATIC COMBAT, CANVAS FX & SYNTH AUDIO)
+   ========================================================================== */
+function initCyberDuelEngine() {
+  const viewport = document.getElementById('duel-viewport');
+  const scene = document.getElementById('duel-scene');
+  const fxCanvas = document.getElementById('duel-fx-canvas');
+  const clashOverlay = document.getElementById('clash-overlay');
+  const shotIndicator = document.getElementById('duel-shot-indicator');
+  const btnPlay = document.getElementById('btn-play-sequence');
+  const btnPlayText = document.getElementById('btn-play-text');
+  const btnClash = document.getElementById('btn-clash-strike');
+  const shotBtns = document.querySelectorAll('.shot-btn');
+  const btnRain = document.getElementById('btn-toggle-rain');
+  const btnSparks = document.getElementById('btn-toggle-sparks');
+  const cyanHp = document.getElementById('cyan-hp');
+  const crimsonHp = document.getElementById('crimson-hp');
+  const fpsEl = document.getElementById('duel-fps');
+
+  if (!viewport || !scene || !fxCanvas) return;
+
+  const ctx = fxCanvas.getContext('2d');
+  let width = (fxCanvas.width = viewport.clientWidth);
+  let height = (fxCanvas.height = viewport.clientHeight);
+
+  window.addEventListener('resize', () => {
+    width = fxCanvas.width = viewport.clientWidth;
+    height = fxCanvas.height = viewport.clientHeight;
+  });
+
+  // State
+  let currentShot = 2;
+  let isSequencePlaying = false;
+  let sequenceTimer = null;
+  let rainActive = true;
+  let sparksActive = true;
+  const mouseTilt = { x: 0, y: 0, targetX: 0, targetY: 0 };
+
+  // 3D Parallax Tilt on Mouse Move
+  viewport.addEventListener('mousemove', (e) => {
+    const rect = viewport.getBoundingClientRect();
+    const x = e.clientX - rect.left - rect.width / 2;
+    const y = e.clientY - rect.top - rect.height / 2;
+    mouseTilt.targetX = (x / rect.width) * 16;
+    mouseTilt.targetY = -(y / rect.height) * 12;
+  });
+
+  viewport.addEventListener('mouseleave', () => {
+    mouseTilt.targetX = 0;
+    mouseTilt.targetY = 0;
+  });
+
+  viewport.addEventListener('click', () => {
+    triggerClashImpact();
+  });
+
+  // Particle Systems: Rain & Combat Plasma Sparks
+  const raindrops = [];
+  const sparks = [];
+  const shockwaveRings = [];
+
+  for (let i = 0; i < 110; i++) {
+    raindrops.push({
+      x: Math.random() * width,
+      y: Math.random() * height,
+      speed: Math.random() * 12 + 16,
+      len: Math.random() * 20 + 12,
+      opacity: Math.random() * 0.5 + 0.25,
+      color: Math.random() > 0.4 ? '#00f0ff' : '#f43f5e'
+    });
+  }
+
+  function emitClashSparks(count = 70) {
+    if (!sparksActive) return;
+    const originX = width * 0.5;
+    const originY = height * 0.48;
+
+    for (let i = 0; i < count; i++) {
+      const angle = Math.random() * Math.PI * 2;
+      const speed = Math.random() * 14 + 4;
+      const isCyan = Math.random() > 0.45;
+      sparks.push({
+        x: originX,
+        y: originY,
+        vx: Math.cos(angle) * speed,
+        vy: Math.sin(angle) * speed,
+        life: 1,
+        decay: Math.random() * 0.03 + 0.015,
+        size: Math.random() * 3.5 + 1.5,
+        color: isCyan ? '#00f0ff' : '#ff0055'
+      });
+    }
+
+    shockwaveRings.push({
+      x: originX,
+      y: originY,
+      radius: 10,
+      maxRadius: Math.max(width, height) * 0.55,
+      opacity: 1,
+      color: '#00f0ff'
+    });
+  }
+
+  // Synthesized Cyber Combat SFX
+  function playPlasmaClashSFX() {
+    try {
+      const AudioCtx = window.AudioContext || window.webkitAudioContext;
+      if (!AudioCtx) return;
+      const ctxAudio = new AudioCtx();
+      const now = ctxAudio.currentTime;
+
+      // 1. Heavy Impact Sub-Bass
+      const subOsc = ctxAudio.createOscillator();
+      const subGain = ctxAudio.createGain();
+      subOsc.type = 'sine';
+      subOsc.frequency.setValueAtTime(140, now);
+      subOsc.frequency.exponentialRampToValueAtTime(30, now + 0.45);
+      subGain.gain.setValueAtTime(0.4, now);
+      subGain.gain.exponentialRampToValueAtTime(0.001, now + 0.45);
+      subOsc.connect(subGain);
+      subGain.connect(ctxAudio.destination);
+      subOsc.start(now);
+      subOsc.stop(now + 0.45);
+
+      // 2. High-Voltage Plasma Blade Clash
+      const clashOsc = ctxAudio.createOscillator();
+      const clashFilter = ctxAudio.createBiquadFilter();
+      const clashGain = ctxAudio.createGain();
+      clashOsc.type = 'sawtooth';
+      clashOsc.frequency.setValueAtTime(880, now);
+      clashOsc.frequency.exponentialRampToValueAtTime(180, now + 0.35);
+
+      clashFilter.type = 'bandpass';
+      clashFilter.frequency.setValueAtTime(2200, now);
+      clashFilter.frequency.exponentialRampToValueAtTime(400, now + 0.35);
+
+      clashGain.gain.setValueAtTime(0.25, now);
+      clashGain.gain.exponentialRampToValueAtTime(0.001, now + 0.35);
+
+      clashOsc.connect(clashFilter);
+      clashFilter.connect(clashGain);
+      clashGain.connect(ctxAudio.destination);
+      clashOsc.start(now);
+      clashOsc.stop(now + 0.35);
+
+      // 3. Electric Spark Crackle Noise
+      const bufferSize = ctxAudio.sampleRate * 0.2;
+      const noiseBuffer = ctxAudio.createBuffer(1, bufferSize, ctxAudio.sampleRate);
+      const output = noiseBuffer.getChannelData(0);
+      for (let i = 0; i < bufferSize; i++) {
+        output[i] = (Math.random() * 2 - 1) * Math.exp(-i / (bufferSize * 0.3));
+      }
+      const whiteNoise = ctxAudio.createBufferSource();
+      whiteNoise.buffer = noiseBuffer;
+      const noiseGain = ctxAudio.createGain();
+      noiseGain.gain.setValueAtTime(0.18, now);
+      noiseGain.gain.exponentialRampToValueAtTime(0.001, now + 0.2);
+      whiteNoise.connect(noiseGain);
+      noiseGain.connect(ctxAudio.destination);
+      whiteNoise.start(now);
+    } catch (e) {
+      // Audio autoplay policy fallback
+    }
+  }
+
+  function triggerClashImpact() {
+    viewport.classList.remove('shake-impact');
+    void viewport.offsetWidth;
+    viewport.classList.add('shake-impact');
+
+    clashOverlay.classList.remove('flash');
+    void clashOverlay.offsetWidth;
+    clashOverlay.classList.add('flash');
+
+    emitClashSparks(90);
+    playPlasmaClashSFX();
+
+    if (cyanHp && crimsonHp) {
+      const randDamage = Math.floor(Math.random() * 8) + 4;
+      crimsonHp.style.width = `${Math.max(25, parseInt(crimsonHp.style.width || 88) - randDamage)}%`;
+      setTimeout(() => {
+        crimsonHp.style.width = '88%';
+      }, 3500);
+    }
+  }
+
+  function setShot(shotIndex, triggerFx = true) {
+    currentShot = shotIndex;
+    document.querySelectorAll('.duel-layer.layer-shot').forEach((layer) => {
+      if (parseInt(layer.dataset.shot) === shotIndex) {
+        layer.classList.add('active');
+      } else {
+        layer.classList.remove('active');
+      }
+    });
+
+    shotBtns.forEach((btn) => {
+      if (parseInt(btn.dataset.targetShot) === shotIndex) {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
+      }
+    });
+
+    const shotTitles = {
+      1: 'SHOT 1: THE APPROACH',
+      2: 'SHOT 2: THE SWORD CLASH',
+      3: 'SHOT 3: SHOCKWAVE RECOIL'
+    };
+    if (shotIndicator) {
+      shotIndicator.textContent = shotTitles[shotIndex] || 'COMBAT_ACTIVE';
+    }
+
+    if (triggerFx) {
+      if (shotIndex === 2) {
+        triggerClashImpact();
+      } else if (shotIndex === 3) {
+        emitClashSparks(120);
+        playPlasmaClashSFX();
+      } else {
+        emitClashSparks(25);
+      }
+    }
+  }
+
+  function startSequence() {
+    isSequencePlaying = true;
+    btnPlay.classList.add('active');
+    btnPlayText.textContent = 'PAUSE 3D SEQUENCE';
+    showToast('3D Combat Sequence: PLAYING');
+
+    let step = 1;
+    setShot(1, true);
+
+    sequenceTimer = setInterval(() => {
+      step = step === 3 ? 1 : step + 1;
+      setShot(step, true);
+    }, 2800);
+  }
+
+  function pauseSequence() {
+    isSequencePlaying = false;
+    btnPlay.classList.remove('active');
+    btnPlayText.textContent = 'PLAY 3D SEQUENCE';
+    clearInterval(sequenceTimer);
+    sequenceTimer = null;
+    showToast('3D Combat Sequence: PAUSED');
+  }
+
+  btnPlay.addEventListener('click', () => {
+    if (isSequencePlaying) {
+      pauseSequence();
+    } else {
+      startSequence();
+    }
+  });
+
+  btnClash.addEventListener('click', () => {
+    setShot(2, true);
+    triggerClashImpact();
+  });
+
+  shotBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      if (isSequencePlaying) pauseSequence();
+      const target = parseInt(btn.dataset.targetShot);
+      setShot(target, true);
+    });
+  });
+
+  if (btnRain) {
+    btnRain.addEventListener('click', () => {
+      rainActive = !rainActive;
+      btnRain.classList.toggle('active', rainActive);
+      showToast(rainActive ? 'Neon Rain FX: ENABLED' : 'Neon Rain FX: DISABLED');
+    });
+  }
+
+  if (btnSparks) {
+    btnSparks.addEventListener('click', () => {
+      sparksActive = !sparksActive;
+      btnSparks.classList.toggle('active', sparksActive);
+      showToast(sparksActive ? 'Plasma Sparks: ENABLED' : 'Plasma Sparks: DISABLED');
+    });
+  }
+
+  let frameCount = 0;
+  let fpsTimer = performance.now();
+
+  function animate(time) {
+    mouseTilt.x += (mouseTilt.targetX - mouseTilt.x) * 0.08;
+    mouseTilt.y += (mouseTilt.targetY - mouseTilt.y) * 0.08;
+
+    scene.style.transform = `rotateY(${mouseTilt.x}deg) rotateX(${mouseTilt.y}deg) scale(1.02)`;
+
+    ctx.clearRect(0, 0, width, height);
+
+    if (rainActive) {
+      for (let i = 0; i < raindrops.length; i++) {
+        const drop = raindrops[i];
+        drop.y += drop.speed;
+        drop.x -= 1.2;
+
+        if (drop.y > height) {
+          drop.y = -drop.len;
+          drop.x = Math.random() * width;
+        }
+
+        ctx.strokeStyle = drop.color;
+        ctx.lineWidth = 1.2;
+        ctx.globalAlpha = drop.opacity;
+        ctx.beginPath();
+        ctx.moveTo(drop.x, drop.y);
+        ctx.lineTo(drop.x - 3, drop.y + drop.len);
+        ctx.stroke();
+      }
+    }
+
+    if (sparksActive) {
+      for (let i = sparks.length - 1; i >= 0; i--) {
+        const s = sparks[i];
+        s.x += s.vx;
+        s.y += s.vy;
+        s.vy += 0.18;
+        s.life -= s.decay;
+
+        if (s.life <= 0) {
+          sparks.splice(i, 1);
+          continue;
+        }
+
+        ctx.fillStyle = s.color;
+        ctx.globalAlpha = s.life;
+        ctx.shadowBlur = 10;
+        ctx.shadowColor = s.color;
+        ctx.beginPath();
+        ctx.arc(s.x, s.y, s.size * s.life, 0, Math.PI * 2);
+        ctx.fill();
+      }
+      ctx.shadowBlur = 0;
+    }
+
+    for (let i = shockwaveRings.length - 1; i >= 0; i--) {
+      const ring = shockwaveRings[i];
+      ring.radius += 18;
+      ring.opacity = 1 - ring.radius / ring.maxRadius;
+
+      if (ring.radius >= ring.maxRadius || ring.opacity <= 0) {
+        shockwaveRings.splice(i, 1);
+        continue;
+      }
+
+      ctx.strokeStyle = ring.color;
+      ctx.lineWidth = 3;
+      ctx.globalAlpha = ring.opacity * 0.8;
+      ctx.beginPath();
+      ctx.arc(ring.x, ring.y, ring.radius, 0, Math.PI * 2);
+      ctx.stroke();
+    }
+
+    ctx.globalAlpha = 1;
+
+    if (currentShot === 2 && Math.random() > 0.65 && sparksActive) {
+      const originX = width * 0.5 + (Math.random() * 20 - 10);
+      const originY = height * 0.48 + (Math.random() * 20 - 10);
+      sparks.push({
+        x: originX,
+        y: originY,
+        vx: (Math.random() - 0.5) * 6,
+        vy: (Math.random() - 0.5) * 6,
+        life: 1,
+        decay: 0.04,
+        size: Math.random() * 2.5 + 1,
+        color: Math.random() > 0.5 ? '#00f0ff' : '#ff0055'
+      });
+    }
+
+    frameCount++;
+    if (time - fpsTimer >= 1000) {
+      if (fpsEl) fpsEl.textContent = `${frameCount} FPS`;
+      frameCount = 0;
+      fpsTimer = time;
+    }
+
+    requestAnimationFrame(animate);
+  }
+
+  requestAnimationFrame(animate);
+  startSequence();
+}
+

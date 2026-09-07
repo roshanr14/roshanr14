@@ -40,11 +40,12 @@
       <nav class="cyber-nav" id="cyber-nav">
         <ul class="nav-list">
           <li><a href="#hero" class="nav-link active"><span class="nav-index">01.</span>// HOME</a></li>
-          <li><a href="#about" class="nav-link"><span class="nav-index">02.</span>// ABOUT</a></li>
-          <li><a href="#skills" class="nav-link"><span class="nav-index">03.</span>// TECH_STACK</a></li>
-          <li><a href="#projects" class="nav-link"><span class="nav-index">04.</span>// PROJECTS</a></li>
-          <li><a href="#timeline" class="nav-link"><span class="nav-index">05.</span>// JOURNEY</a></li>
-          <li><a href="#contact" class="nav-link"><span class="nav-index">06.</span>// CONTACT</a></li>
+          <li><a href="#cyber-duel" class="nav-link"><span class="nav-index">02.</span>// 3D_WARRIOR_DUEL</a></li>
+          <li><a href="#about" class="nav-link"><span class="nav-index">03.</span>// ABOUT</a></li>
+          <li><a href="#skills" class="nav-link"><span class="nav-index">04.</span>// TECH_STACK</a></li>
+          <li><a href="#projects" class="nav-link"><span class="nav-index">05.</span>// PROJECTS</a></li>
+          <li><a href="#timeline" class="nav-link"><span class="nav-index">06.</span>// JOURNEY</a></li>
+          <li><a href="#contact" class="nav-link"><span class="nav-index">07.</span>// CONTACT</a></li>
         </ul>
       </nav>
 
@@ -193,12 +194,121 @@
       </div>
 
       <div class="scroll-down-hud">
-        <a href="#about" aria-label="Scroll to About Section">
+        <a href="#cyber-duel" aria-label="Scroll to 3D Cyber Duel Section">
           <span class="scroll-text">SYSTEM_SCROLL</span>
           <div class="scroll-icon-wrapper">
             <i class="fa-solid fa-chevron-down"></i>
           </div>
         </a>
+      </div>
+    </section>
+
+    <!-- 3D CYBER WARRIOR DUEL CINEMATIC SECTION -->
+    <section id="cyber-duel" class="section duel-section">
+      <div class="section-container">
+        <div class="section-header">
+          <div class="section-tag"><i class="fa-solid fa-gamepad"></i> 3D_COMBAT_SIMULATOR // SHADOW_FIGHT_MODE</div>
+          <h2 class="section-title">02. CYBER WARRIOR <span class="cyber-gradient">DUEL 3D</span></h2>
+          <div class="section-line"></div>
+          <p class="section-subtitle">
+            Experience interactive 3D cinematic side-scrolling combat animation. Control shots, camera tracking, particle shockwaves, rain physics, and high-frequency plasma clash SFX.
+          </p>
+        </div>
+
+        <!-- 3D Duel Interactive Arena Container -->
+        <div class="duel-arena-wrapper cyber-glass" id="duel-arena-wrapper">
+          <div class="arena-top-hud">
+            <div class="warrior-status left-warrior">
+              <div class="warrior-avatar cyan-avatar">
+                <i class="fa-solid fa-user-ninja"></i>
+              </div>
+              <div class="warrior-info">
+                <div class="warrior-name">CYBER ROSHAN <span class="badge-tech">// CYAN KATANA</span></div>
+                <div class="energy-bar-container">
+                  <div class="energy-bar cyan-bar" id="cyan-hp" style="width: 100%;"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="clash-badge">
+              <span class="clash-vs glitch-text" data-text="VS">VS</span>
+              <span class="clash-timer" id="duel-shot-indicator">SHOT 2: THE CLASH</span>
+            </div>
+
+            <div class="warrior-status right-warrior">
+              <div class="warrior-info">
+                <div class="warrior-name">SHADOW TITAN <span class="badge-tech">// CRIMSON BLADE</span></div>
+                <div class="energy-bar-container">
+                  <div class="energy-bar crimson-bar" id="crimson-hp" style="width: 88%;"></div>
+                </div>
+              </div>
+              <div class="warrior-avatar crimson-avatar">
+                <i class="fa-solid fa-shield-halved"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3D Viewport / Canvas Container -->
+          <div class="duel-viewport" id="duel-viewport">
+            <canvas id="duel-fx-canvas" class="duel-fx-canvas"></canvas>
+            
+            <div class="duel-scene-container" id="duel-scene">
+              <div class="duel-layer layer-shot active" id="shot-2" data-shot="2" style="background-image: url('assets/warrior-shot2-clash.jpg');"></div>
+              <div class="duel-layer layer-shot" id="shot-1" data-shot="1" style="background-image: url('assets/warrior-shot1-approach.jpg');"></div>
+              <div class="duel-layer layer-shot" id="shot-3" data-shot="3" style="background-image: url('assets/warrior-shot3-shockwave.jpg');"></div>
+            </div>
+
+            <!-- Screen Shake and Shockwave Flash Overlay -->
+            <div class="clash-shockwave-overlay" id="clash-overlay"></div>
+            <div class="glitch-scanlines"></div>
+
+            <!-- Viewport Overlay Badges -->
+            <div class="viewport-hud-overlay">
+              <div class="hud-item hud-top-left">
+                <span class="hud-dot live-dot"></span> 3D_DEPTH: ACTIVE
+              </div>
+              <div class="hud-item hud-top-right">
+                <span class="hud-val" id="duel-fps">60 FPS</span> // 4K CINEMATIC
+              </div>
+              <div class="hud-item hud-bottom-left">
+                <i class="fa-solid fa-crosshairs"></i> TARGET_LOCK: [0x7FF_ENERGY_CORE]
+              </div>
+              <div class="hud-item hud-bottom-right">
+                <i class="fa-solid fa-volume-high"></i> AUDIO: SYNTH_SFX_READY
+              </div>
+            </div>
+          </div>
+
+          <!-- 3D Video Cinematic Control Dashboard -->
+          <div class="duel-controls-bar">
+            <div class="duel-actions-left">
+              <button class="duel-ctrl-btn active" id="btn-play-sequence" title="Play Full 3D Cinematic Sequence">
+                <i class="fa-solid fa-play"></i>
+                <span id="btn-play-text">PLAY 3D SEQUENCE</span>
+              </button>
+              <button class="duel-ctrl-btn" id="btn-clash-strike" title="Trigger Instant Sword Clash Impact & Shockwave">
+                <i class="fa-solid fa-bolt-lightning"></i>
+                <span>TRIGGER CLASH IMPACT</span>
+              </button>
+            </div>
+
+            <div class="duel-shots-selector">
+              <span class="selector-label">// CAM_SHOT:</span>
+              <button class="shot-btn" data-target-shot="1" title="Shot 1: The Approach">01. APPROACH</button>
+              <button class="shot-btn active" data-target-shot="2" title="Shot 2: The Sword Clash">02. SWORD CLASH</button>
+              <button class="shot-btn" data-target-shot="3" title="Shot 3: Shockwave Recoil">03. SHOCKWAVE</button>
+            </div>
+
+            <div class="duel-actions-right">
+              <button class="duel-icon-btn" id="btn-toggle-rain" title="Toggle Neon Rain Physics">
+                <i class="fa-solid fa-cloud-showers-heavy"></i>
+              </button>
+              <button class="duel-icon-btn" id="btn-toggle-sparks" title="Toggle Plasma Spark Emitters">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 

@@ -1989,3 +1989,406 @@ body {
     text-align: center;
   }
 }
+
+/* ==========================================================================
+   3D CYBER WARRIOR DUEL ARENA & CINEMATIC COMBAT STYLES
+   ========================================================================== */
+.duel-section {
+  position: relative;
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+.duel-arena-wrapper {
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(0, 240, 255, 0.35);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7), 0 0 30px rgba(0, 240, 255, 0.15);
+  overflow: hidden;
+  background: rgba(6, 12, 24, 0.85);
+  backdrop-filter: blur(20px);
+  position: relative;
+  transition: box-shadow var(--transition-normal);
+}
+
+.duel-arena-wrapper:hover {
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.8), 0 0 40px rgba(0, 240, 255, 0.25), 0 0 60px rgba(244, 63, 94, 0.2);
+}
+
+/* Arena Top Fighting Game HUD */
+.arena-top-hud {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  background: rgba(4, 8, 18, 0.95);
+  border-bottom: 1px solid rgba(0, 240, 255, 0.2);
+  gap: 16px;
+}
+
+.warrior-status {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex: 1;
+}
+
+.warrior-status.right-warrior {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.warrior-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.cyan-avatar {
+  background: rgba(0, 240, 255, 0.15);
+  border: 1.5px solid var(--cyan);
+  color: var(--cyan);
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.4);
+}
+
+.crimson-avatar {
+  background: rgba(244, 63, 94, 0.15);
+  border: 1.5px solid var(--magenta);
+  color: var(--magenta);
+  box-shadow: 0 0 15px rgba(244, 63, 94, 0.4);
+}
+
+.warrior-name {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.92rem;
+  letter-spacing: 0.05em;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.badge-tech {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  opacity: 0.75;
+}
+
+.cyan-avatar ~ .warrior-info .badge-tech { color: var(--cyan); }
+.crimson-avatar ~ .warrior-info .badge-tech { color: var(--magenta); }
+
+.energy-bar-container {
+  width: 100%;
+  max-width: 220px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.energy-bar {
+  height: 100%;
+  transition: width 0.4s ease;
+  position: relative;
+}
+
+.cyan-bar {
+  background: linear-gradient(90deg, #0284c7, #00f0ff);
+  box-shadow: 0 0 10px #00f0ff;
+}
+
+.crimson-bar {
+  background: linear-gradient(90deg, #ff0055, #f43f5e);
+  box-shadow: 0 0 10px #ff0055;
+  margin-left: auto;
+}
+
+/* VS Clash Badge */
+.clash-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.clash-vs {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 1.6rem;
+  background: linear-gradient(135deg, var(--cyan), #fff, var(--magenta));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1;
+}
+
+.clash-timer {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--cyan);
+  letter-spacing: 0.1em;
+  margin-top: 4px;
+}
+
+/* 3D Viewport & Cinematic Parallax Stage */
+.duel-viewport {
+  position: relative;
+  width: 100%;
+  height: 480px;
+  background: #020612;
+  overflow: hidden;
+  perspective: 1200px;
+  cursor: crosshair;
+}
+
+.duel-scene-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.1s ease-out;
+}
+
+.duel-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: scale(1.04);
+}
+
+.duel-layer.active {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+/* FX Canvas overlay for dynamic neon rain & sparks */
+.duel-fx-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* Screen Shake Animation */
+.shake-impact {
+  animation: screenShake 0.45s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+@keyframes screenShake {
+  10%, 90% { transform: translate3d(-4px, 2px, 0) rotate(-0.5deg); }
+  20%, 80% { transform: translate3d(5px, -3px, 0) rotate(0.8deg); }
+  30%, 50%, 70% { transform: translate3d(-6px, 4px, 0) rotate(-1deg); }
+  40%, 60% { transform: translate3d(6px, -4px, 0) rotate(0.5deg); }
+}
+
+/* Shockwave Flash */
+.clash-shockwave-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.85) 0%, rgba(0, 240, 255, 0.5) 30%, rgba(244, 63, 94, 0.3) 60%, transparent 80%);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 6;
+  transition: opacity 0.05s ease;
+}
+
+.clash-shockwave-overlay.flash {
+  opacity: 1;
+  animation: shockwaveFade 0.6s ease-out forwards;
+}
+
+@keyframes shockwaveFade {
+  0% { opacity: 1; transform: scale(0.8); }
+  50% { opacity: 0.8; transform: scale(1.1); }
+  100% { opacity: 0; transform: scale(1.4); }
+}
+
+/* Viewport HUD Corner Badges */
+.viewport-hud-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 7;
+  padding: 18px 24px;
+}
+
+.hud-item {
+  position: absolute;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--cyan);
+  background: rgba(6, 12, 24, 0.7);
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 240, 255, 0.3);
+  backdrop-filter: blur(8px);
+}
+
+.hud-top-left { top: 16px; left: 16px; display: flex; align-items: center; gap: 6px; }
+.hud-top-right { top: 16px; right: 16px; }
+.hud-bottom-left { bottom: 16px; left: 16px; }
+.hud-bottom-right { bottom: 16px; right: 16px; }
+
+.live-dot {
+  width: 8px;
+  height: 8px;
+  background: #22c55e;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #22c55e;
+  animation: liveBlink 1.5s infinite;
+}
+
+@keyframes liveBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+/* Duel Controls Bar */
+.duel-controls-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  background: rgba(4, 8, 18, 0.95);
+  border-top: 1px solid rgba(0, 240, 255, 0.2);
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.duel-actions-left, .duel-shots-selector, .duel-actions-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.duel-ctrl-btn {
+  padding: 10px 18px;
+  background: rgba(0, 240, 255, 0.12);
+  border: 1px solid var(--cyan);
+  border-radius: var(--radius-sm);
+  color: var(--cyan);
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.duel-ctrl-btn:hover, .duel-ctrl-btn.active {
+  background: var(--cyan);
+  color: var(--bg-dark);
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.6);
+  transform: translateY(-2px);
+}
+
+#btn-clash-strike {
+  background: rgba(244, 63, 94, 0.15);
+  border-color: var(--magenta);
+  color: var(--magenta);
+}
+
+#btn-clash-strike:hover {
+  background: var(--magenta);
+  color: #fff;
+  box-shadow: 0 0 20px rgba(244, 63, 94, 0.6);
+}
+
+.selector-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.shot-btn {
+  padding: 8px 14px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.shot-btn:hover {
+  border-color: var(--cyan);
+  color: var(--text-primary);
+}
+
+.shot-btn.active {
+  background: rgba(0, 240, 255, 0.2);
+  border-color: var(--cyan);
+  color: var(--cyan);
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
+}
+
+.duel-icon-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border-subtle);
+  color: var(--cyan);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.duel-icon-btn:hover, .duel-icon-btn.active {
+  background: rgba(0, 240, 255, 0.2);
+  border-color: var(--cyan);
+  box-shadow: 0 0 12px rgba(0, 240, 255, 0.4);
+}
+
+@media (max-width: 768px) {
+  .duel-viewport {
+    height: 320px;
+  }
+  .arena-top-hud {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .warrior-status {
+    width: 100%;
+  }
+  .duel-controls-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .duel-actions-left, .duel-shots-selector, .duel-actions-right {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+

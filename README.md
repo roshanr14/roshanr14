@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/roshanr14">
-    <img src="https://raw.githubusercontent.com/roshanr14/roshanr14/main/assets/roshan-warrior-duel.svg?cache_bust=vibecoder_20260907" width="100%" alt="⚡ ROSHAN ⚡ Vibecoder Cyber Banner" />
+    <img src="https://raw.githubusercontent.com/roshanr14/roshanr14/main/assets/vibecoder-workspace.gif" width="100%" alt="⚡ ROSHAN ⚡ Neo-Futuristic Vibe Coder Workspace" />
   </a>
 </p>
 

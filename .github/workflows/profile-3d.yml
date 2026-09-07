@@ -22,17 +22,17 @@ jobs:
       - uses: yoshi389111/github-profile-3d-contrib@0.7.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          USERNAME: roshanr14
+          USERNAME: ${{ github.repository_owner }}
 
       - name: Commit & Push 3D Graphs
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git pull --rebase origin main
           git add -A profile-3d-contrib/
           if git diff --staged --quiet; then
             echo "No changes to commit in 3D graphs."
           else
             git commit -m "feat: Update 3D isometric contribution city [skip ci]"
+            git pull --rebase origin main || git rebase --abort
             git push origin main
           fi

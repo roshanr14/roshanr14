@@ -71,22 +71,6 @@
 
 ---
 
-### 📡 Transmit & Connect
-
-<p align="center">
-  <a href="mailto:roshan.dev@example.com">
-    <img src="https://img.shields.io/badge/Email-roshan.dev%40example.com-00f0ff?style=for-the-badge&logo=gmail&logoColor=black" alt="Email Badge"/>
-  </a>
-  <a href="https://linkedin.com">
-    <img src="https://img.shields.io/badge/LinkedIn-Roshan-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>
-  </a>
-  <a href="https://github.com/roshanr14">
-    <img src="https://img.shields.io/badge/GitHub-Follow%20Me-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Badge"/>
-  </a>
-  <a href="https://twitter.com">
-    <img src="https://img.shields.io/badge/Twitter-Connect-1DA1F2?style=for-the-badge&logo=x&logoColor=white" alt="Twitter Badge"/>
-  </a>
-</p>
 
 ---
 

@@ -131,6 +131,37 @@
       <stop offset="60%" stop-color="#ff007f" stop-opacity="0.7" />
       <stop offset="100%" stop-color="#05131c" stop-opacity="0" />
     </radialGradient>
+
+    <!-- VIBECODER Holographic Shimmer Gradient -->
+    <linearGradient id="vibecoder-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f0ff">
+        <animate attributeName="stop-color" values="#00f0ff;#a855f7;#ff007f;#ffe600;#00f0ff" dur="4s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="25%" stop-color="#ffffff">
+        <animate attributeName="stop-color" values="#ffffff;#00f0ff;#a855f7;#ff007f;#ffffff" dur="4s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="50%" stop-color="#a855f7">
+        <animate attributeName="stop-color" values="#a855f7;#ff007f;#ffe600;#00f0ff;#a855f7" dur="4s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="75%" stop-color="#ff007f">
+        <animate attributeName="stop-color" values="#ff007f;#ffe600;#00f0ff;#a855f7;#ff007f" dur="4s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#00f0ff">
+        <animate attributeName="stop-color" values="#00f0ff;#a855f7;#ff007f;#ffe600;#00f0ff" dur="4s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+
+    <linearGradient id="vibe-badge-glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.85" />
+      <stop offset="50%" stop-color="#a855f7" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#ff007f" stop-opacity="0.85" />
+    </linearGradient>
+
+    <linearGradient id="vibe-plate-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#071926" stop-opacity="0.95" />
+      <stop offset="50%" stop-color="#0f1123" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#050a12" stop-opacity="0.98" />
+    </linearGradient>
   </defs>
 
   <!-- 1. BASE BACKGROUND & STORMY CLOUDS -->
@@ -428,30 +459,58 @@
     <text x="0" y="28" text-anchor="middle" class="font-orbitron" font-weight="900" font-size="64" letter-spacing="14" fill="url(#chrome-grad)">ROSHAN</text>
   </g>
 
-  <!-- "LONE WARRIOR" Badge -->
-  <g transform="translate(500, 135)">
+  <!-- "VIBECODER" Master Badge -->
+  <g transform="translate(500, 136)">
+    <!-- Outer Glow Holographic Chassis -->
+    <polygon points="-160,-15 160,-15 178,15 -178,15" fill="none" stroke="url(#vibe-badge-glow)" stroke-width="1.8" filter="url(#glow-cyan)">
+      <animate attributeName="stroke-width" values="1.5; 2.5; 1.5" dur="2.5s" repeatCount="indefinite" />
+    </polygon>
+    
     <!-- Badge Background Plate -->
-    <polygon points="-150,-14 150,-14 165,14 -165,14" fill="#040e17" stroke="#00f0ff" stroke-width="1.5" filter="url(#glow-cyan)" />
-    <polygon points="-145,-10 145,-10 158,10 -158,10" fill="#081b29" opacity="0.9" />
+    <polygon points="-156,-12 156,-12 172,12 -172,12" fill="url(#vibe-plate-bg)" />
+    
+    <!-- Inner High-Tech Grid & Corner Nodes -->
+    <line x1="-150" y1="-12" x2="-140" y2="-12" stroke="#00f0ff" stroke-width="2.5" />
+    <line x1="140" y1="-12" x2="150" y2="-12" stroke="#ff007f" stroke-width="2.5" />
+    <line x1="-166" y1="12" x2="-156" y2="12" stroke="#ff007f" stroke-width="2.5" />
+    <line x1="156" y1="12" x2="166" y2="12" stroke="#00f0ff" stroke-width="2.5" />
 
-    <!-- Corner Neon Pointers -->
-    <polygon points="-165,14 -172,14 -177,6 -170,6" fill="#ff007f" filter="url(#glow-magenta)" />
-    <polygon points="165,14 172,14 177,6 170,6" fill="#ff007f" filter="url(#glow-magenta)" />
+    <!-- Corner Neon Crystal Winglets -->
+    <polygon points="-178,15 -188,15 -193,5 -183,5" fill="#ff007f" filter="url(#glow-magenta)" opacity="0.9" />
+    <polygon points="178,15 188,15 193,5 183,5" fill="#00f0ff" filter="url(#glow-cyan)" opacity="0.9" />
+    <circle cx="-188" cy="10" r="1.5" fill="#ffffff" />
+    <circle cx="188" cy="10" r="1.5" fill="#ffffff" />
 
-    <!-- "LONE WARRIOR" Main Badge Text -->
-    <text x="0" y="5" text-anchor="middle" class="font-orbitron" font-weight="800" font-size="16" fill="#FFFFFF" letter-spacing="6" filter="url(#glow-cyan)">
-      ⚡ LONE WARRIOR ⚡
+    <!-- Left & Right Circuit Accents -->
+    <path d="M-135,0 L-120,0 L-115,-6" fill="none" stroke="#00f0ff" stroke-width="1.5" opacity="0.7" />
+    <circle cx="-135" cy="0" r="2" fill="#00f0ff" />
+    <path d="M135,0 L120,0 L115,6" fill="none" stroke="#ff007f" stroke-width="1.5" opacity="0.7" />
+    <circle cx="135" cy="0" r="2" fill="#ff007f" />
+
+    <!-- Ambient Shadow & Aura behind VIBECODER text -->
+    <text x="0" y="5.5" text-anchor="middle" class="font-orbitron" font-weight="900" font-size="17" letter-spacing="8" fill="none" stroke="rgba(0, 240, 255, 0.7)" stroke-width="4" filter="url(#glow-cyan)">
+      ⚡ VIBECODER ⚡
+    </text>
+
+    <!-- Main Shimmering VIBECODER Text with Animated Rainbow/Neon Gradient -->
+    <text x="0" y="5.5" text-anchor="middle" class="font-orbitron" font-weight="900" font-size="17" letter-spacing="8" fill="url(#vibecoder-grad)" filter="url(#glow-magenta)">
+      ⚡ VIBECODER ⚡
+    </text>
+    
+    <!-- Top Crystal Highlight Layer -->
+    <text x="0" y="5.5" text-anchor="middle" class="font-orbitron" font-weight="900" font-size="17" letter-spacing="8" fill="#FFFFFF" opacity="0.4">
+      ⚡ VIBECODER ⚡
     </text>
 
     <!-- Sub-quote line underneath -->
     <g transform="translate(0, 28)">
-      <line x1="-120" y1="0" x2="-50" y2="0" stroke="#00f0ff" stroke-width="1.2" opacity="0.8" />
-      <circle cx="-45" cy="0" r="1.5" fill="#00f0ff" />
-      <text x="0" y="3" text-anchor="middle" class="font-rajdhani" font-weight="700" font-size="11" fill="#93c5fd" letter-spacing="2">
-        "FORGED IN BATTLE, HE STANDS UNDEFEATED"
+      <line x1="-130" y1="0" x2="-65" y2="0" stroke="#00f0ff" stroke-width="1.2" opacity="0.8" />
+      <circle cx="-60" cy="0" r="1.5" fill="#00f0ff" />
+      <text x="0" y="3.5" text-anchor="middle" class="font-rajdhani" font-weight="700" font-size="11.5" fill="#93c5fd" letter-spacing="2.5">
+        "WHERE RHYTHM, LOGIC &amp; CODE CONVERGE"
       </text>
-      <circle cx="45" cy="0" r="1.5" fill="#ff007f" />
-      <line x1="50" y1="0" x2="120" y2="0" stroke="#ff007f" stroke-width="1.2" opacity="0.8" />
+      <circle cx="60" cy="0" r="1.5" fill="#ff007f" />
+      <line x1="65" y1="0" x2="130" y2="0" stroke="#ff007f" stroke-width="1.2" opacity="0.8" />
     </g>
   </g>
 

@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/roshanr14">
-    <img src="https://raw.githubusercontent.com/roshanr14/roshanr14/main/assets/roshan-warrior-duel.svg?cache_bust=20260907_v1" width="100%" alt="⚡ ROSHAN ⚡ Lone Warrior Duel Banner" />
+    <img src="https://raw.githubusercontent.com/roshanr14/roshanr14/main/assets/roshan-warrior-duel.svg?cache_bust=vibecoder_20260907" width="100%" alt="⚡ ROSHAN ⚡ Vibecoder Cyber Banner" />
   </a>
 </p>
 

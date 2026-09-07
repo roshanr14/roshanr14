@@ -69,7 +69,7 @@
 
 <p align="center">
   <a href="https://github.com/roshanr14">
-    <img src="https://raw.githubusercontent.com/roshanr14/roshanr14/main/assets/footer-neofuturism.svg?v=20260907" width="100%" alt="⚡ VIBECODER ⚡ Neo-Futurism Footer Banner" />
+    <img src="https://raw.githubusercontent.com/roshanr14/roshanr14/main/assets/footer-neofuturism.svg?v=vibecoder_20260907_v2" width="100%" alt="⚡ VIBECODER ⚡ Neo-Futurism Footer Banner" />
   </a>
 </p>
 

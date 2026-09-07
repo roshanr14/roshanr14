@@ -172,18 +172,18 @@
     <circle cx="285" cy="-8" r="2.5" fill="#ff007f" />
 
     <!-- Ambient Glowing Neon Outline behind Title -->
-    <text x="0" y="8" text-anchor="middle" class="font-orbitron" font-weight="900" font-size="30" letter-spacing="6" stroke="rgba(0, 240, 255, 0.8)" stroke-width="8" stroke-linejoin="round" fill="none" filter="url(#f-glow-cyan)">
-      ⚔️ IT'S ALWAYS ME VS ME ⚔️
-      <animate attributeName="stroke-width" values="6;10;6" dur="2.5s" repeatCount="indefinite" />
+    <text x="0" y="8" text-anchor="middle" class="font-orbitron" font-weight="900" font-size="34" letter-spacing="8" stroke="rgba(0, 240, 255, 0.85)" stroke-width="8" stroke-linejoin="round" fill="none" filter="url(#f-glow-cyan)">
+      ⚡ VIBECODER ⚡
+      <animate attributeName="stroke-width" values="6;11;6" dur="2.5s" repeatCount="indefinite" />
     </text>
 
-    <text x="0" y="8" text-anchor="middle" class="font-orbitron" font-weight="900" font-size="30" letter-spacing="6" stroke="rgba(255, 0, 127, 0.7)" stroke-width="4" stroke-linejoin="round" fill="none" filter="url(#f-glow-magenta)">
-      ⚔️ IT'S ALWAYS ME VS ME ⚔️
+    <text x="0" y="8" text-anchor="middle" class="font-orbitron" font-weight="900" font-size="34" letter-spacing="8" stroke="rgba(255, 0, 127, 0.75)" stroke-width="4" stroke-linejoin="round" fill="none" filter="url(#f-glow-magenta)">
+      ⚡ VIBECODER ⚡
     </text>
 
     <!-- Main Metallic Holographic Fill -->
-    <text x="0" y="8" text-anchor="middle" class="font-orbitron" font-weight="900" font-size="30" letter-spacing="6" fill="url(#title-chrome)">
-      ⚔️ IT'S ALWAYS ME VS ME ⚔️
+    <text x="0" y="8" text-anchor="middle" class="font-orbitron" font-weight="900" font-size="34" letter-spacing="8" fill="url(#title-chrome)">
+      ⚡ VIBECODER ⚡
     </text>
   </g>
 

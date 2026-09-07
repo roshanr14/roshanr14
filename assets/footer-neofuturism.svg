@@ -1,0 +1,231 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 200" width="1000" height="200" fill="none">
+  <defs>
+    <style><![CDATA[
+      @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Rajdhani:wght@600;700&family=JetBrains+Mono:wght@500;700&display=swap');
+      .font-orbitron { font-family: 'Orbitron', 'Segoe UI', Impact, -apple-system, sans-serif; }
+      .font-rajdhani { font-family: 'Rajdhani', 'Segoe UI', -apple-system, sans-serif; }
+      .font-mono { font-family: 'JetBrains Mono', Consolas, monospace; }
+    ]]></style>
+
+    <!-- Glowing Filters -->
+    <filter id="f-glow-cyan" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="blur1" />
+      <feGaussianBlur stdDeviation="12" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur2" />
+        <feMergeNode in="blur1" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="f-glow-magenta" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="blur1" />
+      <feGaussianBlur stdDeviation="10" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur2" />
+        <feMergeNode in="blur1" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="f-glow-intense" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="6" result="blur1" />
+      <feGaussianBlur stdDeviation="18" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur2" />
+        <feMergeNode in="blur1" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Gradients -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#020617" />
+      <stop offset="25%" stop-color="#04182e" />
+      <stop offset="50%" stop-color="#0a0f24" />
+      <stop offset="75%" stop-color="#140727" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+
+    <!-- Animated Wave 1 Gradient -->
+    <linearGradient id="wave-grad-1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.35">
+        <animate attributeName="stop-color" values="#00f0ff;#7e22ce;#ff007f;#00f0ff" dur="6s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="50%" stop-color="#9333ea" stop-opacity="0.45">
+        <animate attributeName="stop-color" values="#9333ea;#ff007f;#00f0ff;#9333ea" dur="6s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#ff007f" stop-opacity="0.35">
+        <animate attributeName="stop-color" values="#ff007f;#00f0ff;#7e22ce;#ff007f" dur="6s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+
+    <!-- Animated Wave 2 Gradient -->
+    <linearGradient id="wave-grad-2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7e22ce" stop-opacity="0.6" />
+      <stop offset="50%" stop-color="#00f0ff" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#ff007f" stop-opacity="0.6" />
+    </linearGradient>
+
+    <!-- Text Chrome Gradient -->
+    <linearGradient id="title-chrome" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="20%" stop-color="#E0F7FF" />
+      <stop offset="45%" stop-color="#00F0FF" />
+      <stop offset="75%" stop-color="#E879F9" />
+      <stop offset="100%" stop-color="#FF007F" />
+    </linearGradient>
+
+    <!-- Badge Plate Gradient -->
+    <linearGradient id="badge-bg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#031b29" stop-opacity="0.95" />
+      <stop offset="50%" stop-color="#110926" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#24051a" stop-opacity="0.95" />
+    </linearGradient>
+
+    <!-- Grid Pattern -->
+    <pattern id="cyber-grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="rgba(0, 240, 255, 0.08)" stroke-width="1" />
+    </pattern>
+  </defs>
+
+  <!-- 1. BACKGROUND RECTANGLE -->
+  <rect width="1000" height="200" rx="10" fill="url(#bg-grad)" />
+  <rect width="1000" height="200" rx="10" fill="url(#cyber-grid)" />
+
+  <!-- 2. ANIMATED PLASMA ENERGY WAVES -->
+  <!-- Wave Layer 1 (Deep) -->
+  <path fill="url(#wave-grad-1)" opacity="0.55">
+    <animate attributeName="d" dur="8s" repeatCount="indefinite"
+      values="
+        M0,130 C180,90 350,170 500,120 C650,70 820,160 1000,110 L1000,200 L0,200 Z;
+        M0,110 C200,160 380,80 500,140 C620,190 800,100 1000,130 L1000,200 L0,200 Z;
+        M0,130 C180,90 350,170 500,120 C650,70 820,160 1000,110 L1000,200 L0,200 Z
+      " />
+  </path>
+
+  <!-- Wave Layer 2 (Front Glow) -->
+  <path fill="url(#wave-grad-2)" opacity="0.45" filter="url(#f-glow-cyan)">
+    <animate attributeName="d" dur="6s" repeatCount="indefinite"
+      values="
+        M0,150 C220,180 340,110 500,145 C660,180 780,120 1000,155 L1000,200 L0,200 Z;
+        M0,140 C160,110 320,175 500,135 C680,95 840,170 1000,140 L1000,200 L0,200 Z;
+        M0,150 C220,180 340,110 500,145 C660,180 780,120 1000,155 L1000,200 L0,200 Z
+      " />
+  </path>
+
+  <!-- Wave Crest Neon Lines -->
+  <path fill="none" stroke="#00f0ff" stroke-width="2" filter="url(#f-glow-cyan)">
+    <animate attributeName="d" dur="6s" repeatCount="indefinite"
+      values="
+        M0,150 C220,180 340,110 500,145 C660,180 780,120 1000,155;
+        M0,140 C160,110 320,175 500,135 C680,95 840,170 1000,140;
+        M0,150 C220,180 340,110 500,145 C660,180 780,120 1000,155
+      " />
+  </path>
+  <path fill="none" stroke="#ff007f" stroke-width="1.8" filter="url(#f-glow-magenta)">
+    <animate attributeName="d" dur="8s" repeatCount="indefinite"
+      values="
+        M0,130 C180,90 350,170 500,120 C650,70 820,160 1000,110;
+        M0,110 C200,160 380,80 500,140 C620,190 800,100 1000,130;
+        M0,130 C180,90 350,170 500,120 C650,70 820,160 1000,110
+      " />
+  </path>
+
+  <!-- 3. TECH CORNER BRACKETS & HUD METRICS -->
+  <!-- Top Left HUD Bracket -->
+  <g transform="translate(25, 20)">
+    <path d="M0,25 L0,0 L25,0" fill="none" stroke="#00f0ff" stroke-width="2" filter="url(#f-glow-cyan)" />
+    <circle cx="0" cy="0" r="2.5" fill="#00f0ff" />
+    <text x="32" y="10" class="font-mono" font-size="8.5" fill="#00f0ff" letter-spacing="2">SYS.FOOTER//TERMINAL_ACTIVE</text>
+    <circle cx="215" cy="7" r="2" fill="#00f0ff">
+      <animate attributeName="opacity" values="1;0.2;1" dur="1.2s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- Top Right HUD Bracket -->
+  <g transform="translate(975, 20)">
+    <path d="M0,25 L0,0 L-25,0" fill="none" stroke="#ff007f" stroke-width="2" filter="url(#f-glow-magenta)" />
+    <circle cx="0" cy="0" r="2.5" fill="#ff007f" />
+    <text x="-32" y="10" text-anchor="end" class="font-mono" font-size="8.5" fill="#ff007f" letter-spacing="2">NEO_FUTURISM//CORE.v5</text>
+  </g>
+
+  <!-- Bottom Left HUD Bracket -->
+  <g transform="translate(25, 180)">
+    <path d="M0,-20 L0,0 L20,0" fill="none" stroke="#00f0ff" stroke-width="1.8" opacity="0.7" />
+  </g>
+
+  <!-- Bottom Right HUD Bracket -->
+  <g transform="translate(975, 180)">
+    <path d="M0,-20 L0,0 L-20,0" fill="none" stroke="#ff007f" stroke-width="1.8" opacity="0.7" />
+  </g>
+
+  <!-- 4. CENTERPIECE TITLE: "IT'S ALWAYS ME VS ME" -->
+  <g transform="translate(500, 72)">
+    <!-- Flanking Tech Arrows -->
+    <path d="M-360,0 L-300,0 L-285,-8" fill="none" stroke="#00f0ff" stroke-width="2" filter="url(#f-glow-cyan)" />
+    <polygon points="-360,0 -352,-4 -352,4" fill="#00f0ff" />
+    <circle cx="-285" cy="-8" r="2.5" fill="#00f0ff" />
+
+    <path d="M360,0 L300,0 L285,-8" fill="none" stroke="#ff007f" stroke-width="2" filter="url(#f-glow-magenta)" />
+    <polygon points="360,0 352,-4 352,4" fill="#ff007f" />
+    <circle cx="285" cy="-8" r="2.5" fill="#ff007f" />
+
+    <!-- Ambient Glowing Neon Outline behind Title -->
+    <text x="0" y="8" text-anchor="middle" class="font-orbitron" font-weight="900" font-size="30" letter-spacing="6" stroke="rgba(0, 240, 255, 0.8)" stroke-width="8" stroke-linejoin="round" fill="none" filter="url(#f-glow-cyan)">
+      ⚔️ IT'S ALWAYS ME VS ME ⚔️
+      <animate attributeName="stroke-width" values="6;10;6" dur="2.5s" repeatCount="indefinite" />
+    </text>
+
+    <text x="0" y="8" text-anchor="middle" class="font-orbitron" font-weight="900" font-size="30" letter-spacing="6" stroke="rgba(255, 0, 127, 0.7)" stroke-width="4" stroke-linejoin="round" fill="none" filter="url(#f-glow-magenta)">
+      ⚔️ IT'S ALWAYS ME VS ME ⚔️
+    </text>
+
+    <!-- Main Metallic Holographic Fill -->
+    <text x="0" y="8" text-anchor="middle" class="font-orbitron" font-weight="900" font-size="30" letter-spacing="6" fill="url(#title-chrome)">
+      ⚔️ IT'S ALWAYS ME VS ME ⚔️
+    </text>
+  </g>
+
+  <!-- 5. HOLOGRAPHIC BADGE: "⚡ CRAFTED WITH PASSION BY ROSHAN ⚡" -->
+  <g transform="translate(500, 122)">
+    <!-- Chamfered Holographic Badge Plate -->
+    <polygon points="-180,-13 180,-13 195,13 -195,13" fill="url(#badge-bg)" stroke="#00f0ff" stroke-width="1.5" filter="url(#f-glow-cyan)">
+      <animate attributeName="stroke" values="#00f0ff;#a855f7;#ff007f;#00f0ff" dur="4s" repeatCount="indefinite" />
+    </polygon>
+
+    <!-- Corner Neon Winglets -->
+    <polygon points="-195,13 -204,13 -209,4 -200,4" fill="#ff007f" filter="url(#f-glow-magenta)" />
+    <polygon points="195,13 204,13 209,4 200,4" fill="#00f0ff" filter="url(#f-glow-cyan)" />
+
+    <!-- Badge Text -->
+    <text x="0" y="4.5" text-anchor="middle" class="font-orbitron" font-weight="800" font-size="12.5" fill="#FFFFFF" letter-spacing="3" filter="url(#f-glow-cyan)">
+      ⚡ CRAFTED WITH PASSION BY ROSHAN ⚡
+    </text>
+  </g>
+
+  <!-- 6. BOTTOM SUB-TERMINAL BANNER -->
+  <g transform="translate(500, 168)">
+    <line x1="-240" y1="0" x2="-140" y2="0" stroke="#00f0ff" stroke-width="1.2" opacity="0.8" />
+    <circle cx="-135" cy="0" r="2" fill="#00f0ff" />
+    
+    <text x="0" y="3.5" text-anchor="middle" class="font-rajdhani" font-weight="700" font-size="12" fill="#93c5fd" letter-spacing="2.5">
+      // PUSHING LIMITS • EVOLVING CODE • FORGING THE FUTURE //
+    </text>
+
+    <circle cx="135" cy="0" r="2" fill="#ff007f" />
+    <line x1="140" y1="0" x2="240" y2="0" stroke="#ff007f" stroke-width="1.2" opacity="0.8" />
+  </g>
+
+  <!-- 7. HORIZONTAL LASER SCANLINE SWEEP -->
+  <g opacity="0.3" pointer-events="none">
+    <line x1="0" y1="0" x2="1000" y2="0" stroke="#00f0ff" stroke-width="2" filter="url(#f-glow-cyan)">
+      <animate attributeName="y1" values="-10; 210; -10" dur="4s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="-10; 210; -10" dur="4s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0; 0.8; 0.8; 0" dur="4s" repeatCount="indefinite" />
+    </line>
+  </g>
+
+  <!-- Outer Neon Border Frame -->
+  <rect x="1" y="1" width="998" height="198" rx="10" fill="none" stroke="#00f0ff" stroke-width="1.2" opacity="0.3" />
+</svg>

@@ -69,9 +69,7 @@
 
 <p align="center">
   <a href="https://github.com/roshanr14">
-    <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=020617,041e3a,00f0ff,7e22ce,ff007f,041e3a,020617&height=150&section=footer&text=⚡%20ME%20VS%20ME%20⚡&fontSize=26&fontColor=ffffff&fontAlignY=60&desc=⚔️%20CRAFTED%20WITH%20PASSION%20BY%20ROSHAN%20⚔️&descAlignY=84&descSize=13&descColor=00f0ff" width="100%" alt="Footer Banner" />
+    <img src="https://raw.githubusercontent.com/roshanr14/roshanr14/main/assets/footer-neofuturism.svg?v=20260907" width="100%" alt="⚡ ME VS ME ⚡ Neo-Futurism Footer Banner" />
   </a>
-  <br>
-  <b><code>⚔️ "IT'S ALWAYS ME VS ME" ⚔️</code></b><br>
-  <sub><b>⚡ PUSHING LIMITS • EVOLVING CODE • FORGING THE FUTURE ⚡</b></sub>
 </p>
+

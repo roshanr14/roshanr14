@@ -24,7 +24,7 @@
 | 💻 **Core Languages** |  **`Python`** • **`C++`** • **`JAVA`**|
 | 🌐 **Frontend Stack** | **`React.js`** • **`Next.js`** • **`Tailwind CSS`** • **`Vite`** |
 | ⚙️ **Backend & APIs** | **`Node.js`** • **`Supabase`** |
-| 🗄️ **Databases** | **`MongoDB`** • **`PostgreSQL`** • **`MySQL`** |
+| 🗄️ **Databases** | **`MongoDB`** •  **`MySQL`** |
 | 🧰 **Tools** | **`Antigravity`** • **`GitHub`** • **`Vercel`** • **`Claude`** • **`VS Code`**  |
 | 🎯 **Current Focus** | **`Eager to learn new technologies`** |
 | ☕ **Fun Fact** | **`"I turn caffeine and curiosity into clean, functional code ☕🚀"`** |

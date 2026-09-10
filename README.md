@@ -21,7 +21,7 @@
 | 👤 **Name & Identity** | **`Roshan`** |
 | 🎓 **Academic Degree** | **`Bachelor of Engineering (B.E)`** — **`Engineering Undergraduate`** |
 | 💼 **Core Domain** | **`Engineering Student`** & **`Full-Stack Web Developer`** |
-| 💻 **Core Languages** |  **`Python`** • **`C++`** • **`JAVA`**|
+| 💻 **Core Languages** |  **`Python`**  • **`JAVA`**|
 | 🌐 **Frontend Stack** | **`React.js`** • **`Next.js`** • **`Tailwind CSS`** • **`Vite`** |
 | ⚙️ **Backend & APIs** | **`Node.js`** • **`Supabase`** |
 | 🗄️ **Databases** | **`MongoDB`** •  **`MySQL`** |

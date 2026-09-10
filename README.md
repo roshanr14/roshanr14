@@ -19,7 +19,7 @@
 | 🏷️ **ATTRIBUTE** | 💎 **SPECIFICATION & DETAILS** |
 | :--- | :--- |
 | 👤 **Name & Identity** | **`Roshan`** |
-| 🎓 **Academic Degree** | **`Bachelor of Technology (B.Tech)`** — **`Engineering Undergraduate`** |
+| 🎓 **Academic Degree** | **`Bachelor of Engineering (B.E)`** — **`Engineering Undergraduate`** |
 | 💼 **Core Domain** | **`Engineering Student`** & **`Full-Stack Web Developer`** |
 | 💻 **Core Languages** |  **`Python`** • **`C++`** • **`JAVA`**|
 | 🌐 **Frontend Stack** | **`React.js`** • **`Next.js`** • **`Tailwind CSS`** • **`Vite`** |

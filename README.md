@@ -22,7 +22,7 @@
 | 🎓 **Academic Degree** | **`Bachelor of Engineering (B.E)`** — **`Engineering Undergraduate`** |
 | 💼 **Core Domain** | **`Engineering Student`** & **`Full-Stack Web Developer`** |
 | 💻 **Core Languages** |  **`Python`**  • **`JAVA`**  • **`HTML`** |
-| 🌐 **Frontend Stack** | **`React.js`** • **`Next.js`** • **`Tailwind CSS`** • **`Vite`** |
+| 🌐 **Frontend Stack** | **`React.js`**  • **`Tailwind CSS`** • **`Vite`** |
 | ⚙️ **Backend & APIs** | **`Node.js`** • **`Supabase`** |
 | 🗄️ **Databases** | **`MongoDB`** •  **`MySQL`** |
 | 🧰 **Tools** | **`Antigravity`** • **`GitHub`** • **`Vercel`** • **`Claude`** • **`VS Code`**  |
